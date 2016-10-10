@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DCE69A0EAB45C18811A02E9D1E971B497EB1C3EA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DCE69A0EAB45C18811A02E9D1E971B497EB1C3EA" : 0,
+    "617A5B283BEB62A14523C574DE0B2F7C0DA3AD92" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AE1CE324-86B4-4A1D-8D6F-560FF9D08498",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DCE69A0EAB45C18811A02E9D1E971B497EB1C3EA" : "yunbo\/",
+    "617A5B283BEB62A14523C574DE0B2F7C0DA3AD92" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BasicFramework",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BasicFramework\/BasicFramework.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TLGU\/YunBogit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "617A5B283BEB62A14523C574DE0B2F7C0DA3AD92"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TLGU\/yunbo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DCE69A0EAB45C18811A02E9D1E971B497EB1C3EA"
+    }
+  ]
+}
