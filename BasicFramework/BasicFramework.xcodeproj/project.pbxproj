@@ -63,6 +63,10 @@
 		364DA6561D6584F400F6F424 /* MyObjectCoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DA61C1D6584F400F6F424 /* MyObjectCoding.framework */; };
 		364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6581D65851C00F6F424 /* AppDelegate.m */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
+		C83048A41DACE23B006FAE28 /* ZYPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C830489F1DACE23B006FAE28 /* ZYPathButton.m */; };
+		C83048A51DACE23B006FAE28 /* ZYPathItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C83048A11DACE23B006FAE28 /* ZYPathItemButton.m */; };
+		C83048A61DACE23B006FAE28 /* ZYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C83048A31DACE23B006FAE28 /* ZYTabBar.m */; };
+		C83048A91DACE269006FAE28 /* UIView+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C83048A81DACE269006FAE28 /* UIView+LBExtension.m */; };
 		C87896E01D9577BD00264115 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87896DE1D9577BD00264115 /* LoginViewController.m */; };
 		C87896E11D9577BD00264115 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87896DF1D9577BD00264115 /* LoginViewController.xib */; };
 		C87896E51D958A7B00264115 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87896E31D958A7B00264115 /* RegisterViewController.m */; };
@@ -191,6 +195,14 @@
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
 		BDD62ADF7C767CC104287091 /* Pods-BasicFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		C830489E1DACE23B006FAE28 /* ZYPathButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPathButton.h; sourceTree = "<group>"; };
+		C830489F1DACE23B006FAE28 /* ZYPathButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPathButton.m; sourceTree = "<group>"; };
+		C83048A01DACE23B006FAE28 /* ZYPathItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPathItemButton.h; sourceTree = "<group>"; };
+		C83048A11DACE23B006FAE28 /* ZYPathItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPathItemButton.m; sourceTree = "<group>"; };
+		C83048A21DACE23B006FAE28 /* ZYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTabBar.h; sourceTree = "<group>"; };
+		C83048A31DACE23B006FAE28 /* ZYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTabBar.m; sourceTree = "<group>"; };
+		C83048A71DACE269006FAE28 /* UIView+LBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LBExtension.h"; sourceTree = "<group>"; };
+		C83048A81DACE269006FAE28 /* UIView+LBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LBExtension.m"; sourceTree = "<group>"; };
 		C87896DD1D9577BD00264115 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C87896DE1D9577BD00264115 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C87896DF1D9577BD00264115 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -276,6 +288,7 @@
 		36111A971D6EE4FC00A03BF4 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				C830489D1DACE23B006FAE28 /* customTabbar */,
 				C8A99CD71D96564C00633A0D /* NHCustomLoadingAnimationView.h */,
 				C8A99CD81D96564C00633A0D /* NHCustomLoadingAnimationView.m */,
 				C8A99CD41D9655DE00633A0D /* NHCustomNoNetworkEmptyView.h */,
@@ -776,6 +789,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C830489D1DACE23B006FAE28 /* customTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				C83048A71DACE269006FAE28 /* UIView+LBExtension.h */,
+				C83048A81DACE269006FAE28 /* UIView+LBExtension.m */,
+				C830489E1DACE23B006FAE28 /* ZYPathButton.h */,
+				C830489F1DACE23B006FAE28 /* ZYPathButton.m */,
+				C83048A01DACE23B006FAE28 /* ZYPathItemButton.h */,
+				C83048A11DACE23B006FAE28 /* ZYPathItemButton.m */,
+				C83048A21DACE23B006FAE28 /* ZYTabBar.h */,
+				C83048A31DACE23B006FAE28 /* ZYTabBar.m */,
+			);
+			path = customTabbar;
+			sourceTree = "<group>";
+		};
 		C8A99CDD1D969F4C00633A0D /* YSLContainerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,6 +1038,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83048A91DACE269006FAE28 /* UIView+LBExtension.m in Sources */,
+				C83048A61DACE23B006FAE28 /* ZYTabBar.m in Sources */,
 				364DA6531D6584F400F6F424 /* UIScrollView+MJExtension.m in Sources */,
 				364DA6301D6584F400F6F424 /* BasicMainNC.m in Sources */,
 				364DA6321D6584F400F6F424 /* BasicMainWebNC.m in Sources */,
@@ -1018,7 +1048,9 @@
 				364DA6291D6584F400F6F424 /* UIView+Extension.m in Sources */,
 				364DA61D1D6584F400F6F424 /* NSObject+YGTool.m in Sources */,
 				364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */,
+				C83048A51DACE23B006FAE28 /* ZYPathItemButton.m in Sources */,
 				364DA6521D6584F400F6F424 /* MJRefreshHeaderView.m in Sources */,
+				C83048A41DACE23B006FAE28 /* ZYPathButton.m in Sources */,
 				364DA6511D6584F400F6F424 /* MJRefreshFooterView.m in Sources */,
 				364DA61E1D6584F400F6F424 /* NSString+LBKJExtenison.m in Sources */,
 				364DA6251D6584F400F6F424 /* UIImage+SPIExtension.m in Sources */,

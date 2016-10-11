@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZo-LZ-FdF">
-                    <color key="backgroundColor" red="0.44705882349999998" green="0.66274509800000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.87843137250000003" green="0.20784313730000001" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="igG-DU-Aye"/>
                     </constraints>

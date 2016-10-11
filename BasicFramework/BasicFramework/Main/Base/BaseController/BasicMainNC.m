@@ -79,7 +79,7 @@
         // [self setNeedsStatusBarAppearanceUpdate];
         
         //设置状态栏颜色
-        [self setStatusBarBackgroundColor:kRGB(101, 169, 252)];
+        [self setStatusBarBackgroundColor:kRGB(232, 78 ,108)];
     }
     
     - (void)viewWillDisappear:(BOOL)animated{

@@ -17,8 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIViewController *vc1=[UIViewController new];vc1.title=@"影视";
-    UIViewController *vc2=[UIViewController new];vc2.title=@"VR";
+    UIViewController *vc1=[UIViewController new];vc1.title=@"List1";
+    vc1.view.backgroundColor=[UIColor blueColor];
+    
+    UIViewController *vc2=[UIViewController new];vc2.title=@"List2";
     YSLContainerViewController *containerVC = [[YSLContainerViewController alloc]initWithControllers:@[vc1,vc2]
                                                                                         topBarHeight:20
                                                                                 parentViewController:self];

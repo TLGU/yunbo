@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaL-qu-8cH">
-                    <color key="backgroundColor" red="0.44705882352941179" green="0.66274509803921566" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.87843137250000003" green="0.20784313730000001" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="D0V-ja-bAX"/>
                     </constraints>
@@ -158,7 +158,7 @@
                 <constraint firstItem="vth-zE-8hI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wkp-sE-31K"/>
                 <constraint firstItem="gaL-qu-8cH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="x5P-Iz-u0g"/>
             </constraints>
-            <point key="canvasLocation" x="16.5" y="52.5"/>
+            <point key="canvasLocation" x="-27" y="12"/>
         </view>
     </objects>
     <resources>
