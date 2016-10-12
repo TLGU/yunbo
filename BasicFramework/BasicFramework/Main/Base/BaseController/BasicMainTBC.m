@@ -11,6 +11,9 @@
 #import "BasicMainWebNC.h"
 #import "BasicMainNC.h"
 #import "ZYTabBar.h"
+
+
+
 @interface BasicMainTBC ()<ZYTabBarDelegate>
 
 @end
@@ -39,6 +42,8 @@
     selectAtts[NSFontAttributeName] = [UIFont systemFontOfSize:13];
     selectAtts[NSForegroundColorAttributeName] = [UIColor colorWithRed:0.42f green:0.33f blue:0.27f alpha:1.00f];
     [item setTitleTextAttributes:selectAtts forState:UIControlStateSelected];
+    
+    
 }
     
 - (void)viewDidLoad {
@@ -112,14 +117,22 @@
 #pragma mark--ZYTabBarDelegate
 - (void)pathButton:(ZYPathButton *)ZYPathButton clickItemButtonAtIndex:(NSUInteger)itemButtonIndex {
     NSLog(@" 点中了第%ld个按钮" , itemButtonIndex);
-//    UINavigationController *Vc = [[UINavigationController alloc]initWithRootViewController:[ZYNewViewController new]];
-//    Vc.view.backgroundColor = [self randomColor];
-//    [self presentViewController:Vc animated:YES completion:nil];
+    
+
     
     if (itemButtonIndex==0) {
+        
          [[NSNotificationCenter defaultCenter] postNotificationName:LoginStatus_Changed object:nil];
+    }else{
+        
+       
     }
     
+    
+    
 }
+
+
+
 
 @end

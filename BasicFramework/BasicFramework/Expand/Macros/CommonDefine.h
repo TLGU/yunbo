@@ -93,9 +93,23 @@ return self;\
 \
 }
 
+/**
+ *  友盟三方登录支付宏
+ */
+//友盟appkey
+#define UMENG_APPKEY  @"5798417367e58e15a6003b9a"
+//QQ AppId
+#define QQ_APPID  @"1105572618"
+//QQ appKey
+#define QQ_APPKEY @"P7YMniAmHEmtflPV"
+//微信 AppId
+#define WEIXIN_APPID @"wxe1a6b92abbb2ccc6"
+//微信 appKey
+#define WEIXIN_APPKEY @"edbea80d435d3f79fddacb1ba948225a"
 
-
-
+//#define WEIXIN_APPID @"wxb4ba3c02aa476ea1"
+////微信 appKey
+//#define WEIXIN_APPKEY @"edbea80d435d3f79fddacb1ba948225a"
 
 
 

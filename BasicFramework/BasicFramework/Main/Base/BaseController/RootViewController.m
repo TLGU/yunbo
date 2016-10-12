@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "YSLContainerViewController.h"
+#import "TestViewController.h"
 @interface RootViewController ()<YSLContainerViewControllerDelegate>
     
     @end
@@ -17,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIViewController *vc1=[UIViewController new];vc1.title=@"List1";
+    TestViewController *vc1=[TestViewController new];vc1.title=@"List1";
     vc1.view.backgroundColor=[UIColor blueColor];
     
     UIViewController *vc2=[UIViewController new];vc2.title=@"List2";

@@ -302,6 +302,8 @@ static NetWorkManager *network = nil;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure(error);
     }];
+    
+    
 }
 
 #pragma mark - alertview

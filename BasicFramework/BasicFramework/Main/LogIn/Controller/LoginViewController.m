@@ -10,8 +10,8 @@
 #import "RegisterViewController.h"
 #import "ForgetPwdViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
-
-@interface LoginViewController ()
+#import <UMSocialCore/UMSocialCore.h>
+@interface LoginViewController ()<UIAlertViewDelegate>
 {
     MPMoviePlayerViewController *_movie;
 }
@@ -67,11 +67,12 @@
 
 
 - (IBAction)wxLoginAction:(id)sender {
-   
+    
+    [self authWithPlatform:UMSocialPlatformType_WechatSession];
 }
     
 - (IBAction)qqLoginAction:(id)sender {
-    
+     [self authWithPlatform:UMSocialPlatformType_QQ];
 }
     
 - (void)viewDidLoad {
@@ -104,6 +105,52 @@
     return UIStatusBarStyleDefault;
 }
 
+//三方平台授权
+-(void)authWithPlatform:(UMSocialPlatformType)platformType
+{
+    
+        [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WEIXIN_APPID appSecret:WEIXIN_APPKEY redirectURL:@"http://mobile.umeng.com/social"];
+    
+        [[UMSocialManager defaultManager]  authWithPlatform:platformType currentViewController:self completion:^(id result, NSError *error) {
+            
+            UMSocialAuthResponse *authresponse = result;
+            NSString *message = [NSString stringWithFormat:@"result: %d\n uid: %@\n accessToken: %@\n",(int)error.code,authresponse.uid,authresponse.accessToken];
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login"
+//                                                            message:message
+//                                                           delegate:nil
+//                                                  cancelButtonTitle:NSLocalizedString(@"确定", nil)
+//                                                  otherButtonTitles:nil];
+//            [alert show];
+            
+            NSLog(@"授权信息:%@",message);
+            
+            [self getUserInfoForPlatform:platformType];
+           
+        }];
+    
+    
+}
 
 
+
+//获取用户信息
+
+// 在需要进行获取用户信息的UIViewController中加入如下代码
+
+
+- (void)getUserInfoForPlatform:(UMSocialPlatformType)platformType
+{
+    [[UMSocialManager defaultManager] getUserInfoWithPlatform:platformType currentViewController:self completion:^(id result, NSError *error) {
+        UMSocialUserInfoResponse *userinfo =result;
+        NSString *message = [NSString stringWithFormat:@"name: %@\n icon: %@\n gender: %@\n",userinfo.name,userinfo.iconurl,userinfo.gender];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"UserInfo"
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"确定", nil)
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+    
+    
+}
 @end
