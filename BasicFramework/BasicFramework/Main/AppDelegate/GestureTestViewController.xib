@@ -16,26 +16,35 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-JE-Jf7">
-                    <frame key="frameInset" minX="142" minY="168" width="46" height="30"/>
-                    <state key="normal" title="设置手势密码"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goA-Qu-bTU">
-                    <frame key="frameInset" minX="170" minY="241" width="46" height="30"/>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goA-Qu-bTU">
                     <state key="normal" title="登录手势密码"/>
+                    <connections>
+                        <action selector="BtnClick:" destination="-1" eventType="touchUpInside" id="Wh0-dg-xWF"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNS-yd-4ii">
-                    <frame key="frameInset" minX="127" minY="441" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNS-yd-4ii">
+                    <state key="normal" title="修改手势密码"/>
+                    <connections>
+                        <action selector="BtnClick:" destination="-1" eventType="touchUpInside" id="ELQ-o7-5dI"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l26-my-yVm">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l26-my-yVm">
                     <state key="normal" title="验证手势密码"/>
+                    <connections>
+                        <action selector="BtnClick:" destination="-1" eventType="touchUpInside" id="S3K-Dy-r4K"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-JE-Jf7">
+                    <state key="normal" title="设置手势密码"/>
+                    <connections>
+                        <action selector="BtnClick:" destination="-1" eventType="touchUpInside" id="JFQ-CF-0Qx"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="NNS-yd-4ii" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4Yn-qj-zya"/>
-                <constraint firstItem="Enj-JE-Jf7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="168" id="7Yr-e5-GSh"/>
+                <constraint firstItem="Enj-JE-Jf7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="7Yr-e5-GSh"/>
                 <constraint firstItem="l26-my-yVm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Qs-xT-J71"/>
                 <constraint firstItem="Enj-JE-Jf7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fkw-yk-LZs"/>
                 <constraint firstItem="goA-Qu-bTU" firstAttribute="top" secondItem="Enj-JE-Jf7" secondAttribute="bottom" constant="20" id="TRe-PJ-mIe"/>
@@ -43,7 +52,7 @@
                 <constraint firstItem="goA-Qu-bTU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iZb-cZ-xj9"/>
                 <constraint firstItem="NNS-yd-4ii" firstAttribute="top" secondItem="l26-my-yVm" secondAttribute="bottom" constant="20" id="pGy-T0-sT1"/>
             </constraints>
-            <point key="canvasLocation" x="-289" y="-134"/>
+            <point key="canvasLocation" x="-690" y="-272"/>
         </view>
     </objects>
 </document>

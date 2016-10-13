@@ -114,7 +114,7 @@
 /**
  *  整个解锁View的Center.y值 在当前屏幕的3/5位置
  */
-#define CircleViewCenterY kScreenH * 3/5
+#define CircleViewCenterY kScreenH * 1/2
 
 /**
  *  连接的圆最少的个数

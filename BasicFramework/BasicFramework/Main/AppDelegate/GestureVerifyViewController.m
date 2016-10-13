@@ -45,6 +45,8 @@
     
     PCLockLabel *msgLabel = [[PCLockLabel alloc] init];
     msgLabel.frame = CGRectMake(0, 0, kScreenW, 14);
+    
+    
     msgLabel.center = CGPointMake(kScreenW/2, CGRectGetMinY(lockView.frame) - 30);
     [msgLabel showNormalMsg:gestureTextOldGesture];
     self.msgLabel = msgLabel;

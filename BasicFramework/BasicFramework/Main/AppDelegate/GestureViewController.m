@@ -35,13 +35,16 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    //测试
     if (self.type == GestureViewControllerTypeLogin) {
         [self.navigationController setNavigationBarHidden:YES animated:animated];
     }
-    
+
     // 进来先清空存的第一个密码
     [PCCircleViewConst saveGesture:nil Key:gestureOneSaveKey];
+    
+    
+    
 }
 
 - (instancetype)init
@@ -58,6 +61,8 @@
     // Do any additional setup after loading the view.
     
     [self.view setBackgroundColor:CircleViewBackgroundColor];
+    
+   
     
     // 1.界面相同部分生成器
     [self setupSameUI];
@@ -111,6 +116,7 @@
     
     PCLockLabel *msgLabel = [[PCLockLabel alloc] init];
     msgLabel.frame = CGRectMake(0, 0, kScreenW, 14);
+    
     msgLabel.center = CGPointMake(kScreenW/2, CGRectGetMinY(lockView.frame) - 30);
     self.msgLabel = msgLabel;
     [self.view addSubview:msgLabel];

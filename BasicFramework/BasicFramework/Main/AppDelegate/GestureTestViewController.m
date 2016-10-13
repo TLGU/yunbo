@@ -7,7 +7,9 @@
 //
 
 #import "GestureTestViewController.h"
-
+#import "GestureVerifyViewController.h"
+#import "GestureViewController.h"
+#import "PCCircleViewConst.h"
 @interface GestureTestViewController ()
 
 @end
@@ -24,14 +26,59 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (IBAction)BtnClick:(UIButton *)sender {
+    
+    switch (sender.tag) {
+        case 1:
+        {
+            GestureViewController *gestureVc = [[GestureViewController alloc] init];
+            gestureVc.type = GestureViewControllerTypeSetting;
+            [self.navigationController pushViewController:gestureVc animated:YES];
+        }
+            break;
+        case 2:
+        {
+            if ([[PCCircleViewConst getGestureWithKey:gestureFinalSaveKey] length]) {
+                GestureViewController *gestureVc = [[GestureViewController alloc] init];
+                [gestureVc setType:GestureViewControllerTypeLogin];
+                [self.navigationController pushViewController:gestureVc animated:YES];
+            } else {
+                UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"暂未设置手势密码，是否前往设置" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+                [alerView show];
+            }
+        }
+            break;
+        case 3:
+        {
+            GestureVerifyViewController *gestureVerifyVc = [[GestureVerifyViewController alloc] init];
+            [self.navigationController pushViewController:gestureVerifyVc animated:YES];
+        }
+            break;
+            
+        case 4:
+        {
+            GestureVerifyViewController *gestureVerifyVc = [[GestureVerifyViewController alloc] init];
+            gestureVerifyVc.isToSetNewGesture = YES;
+            [self.navigationController pushViewController:gestureVerifyVc animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
 }
-*/
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        GestureViewController *gestureVc = [[GestureViewController alloc] init];
+        gestureVc.type = GestureViewControllerTypeSetting;
+        [self.navigationController pushViewController:gestureVc animated:YES];
+    }
+}
+
+
+
 
 @end

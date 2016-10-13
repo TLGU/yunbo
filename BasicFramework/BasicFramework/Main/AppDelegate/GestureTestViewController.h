@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface GestureTestViewController : UIViewController
+#import "BasicMainVC.h"
+@interface GestureTestViewController :UIViewController
 
 @end

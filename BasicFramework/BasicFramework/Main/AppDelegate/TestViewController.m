@@ -47,7 +47,7 @@
 
 - (IBAction)unlock:(id)sender {
     
-    GestureTestViewController *vc=[GestureTestViewController new];
+    GestureTestViewController *vc=[[GestureTestViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

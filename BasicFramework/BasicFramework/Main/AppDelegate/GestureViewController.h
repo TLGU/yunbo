@@ -1,6 +1,8 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 typedef enum{
     GestureViewControllerTypeSetting = 1,
     GestureViewControllerTypeLogin
