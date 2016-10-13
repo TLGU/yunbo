@@ -50,9 +50,19 @@
                         <action selector="zfbPayTest:" destination="-1" eventType="touchUpInside" id="MOQ-e2-dbZ"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7M-j1-aZA">
+                    <state key="normal" title="手势密码解锁">
+                        <color key="titleColor" red="0.96235211610000004" green="0.99600559909999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="unlock:" destination="-1" eventType="touchUpInside" id="Lz9-qJ-lO3"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.46421284855678446" blue="0.26558658261256818" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="ZW1-PH-Rap" firstAttribute="top" secondItem="W7M-j1-aZA" secondAttribute="bottom" constant="23" id="1aP-QS-ChG"/>
+                <constraint firstItem="W7M-j1-aZA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6uh-aa-O6A"/>
                 <constraint firstItem="2O1-WL-35e" firstAttribute="top" secondItem="IMW-nq-vpK" secondAttribute="bottom" constant="20.5" id="90w-k7-mLM"/>
                 <constraint firstItem="MrP-tO-x5A" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Sh-GI-oNA"/>
                 <constraint firstItem="IMW-nq-vpK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DAx-I5-ubb"/>
@@ -62,7 +72,7 @@
                 <constraint firstItem="IMW-nq-vpK" firstAttribute="top" secondItem="ZW1-PH-Rap" secondAttribute="bottom" constant="28" id="rz5-5T-wGy"/>
                 <constraint firstItem="MrP-tO-x5A" firstAttribute="top" secondItem="2O1-WL-35e" secondAttribute="bottom" constant="19.5" id="sRn-k9-aHz"/>
             </constraints>
-            <point key="canvasLocation" x="-408" y="-242"/>
+            <point key="canvasLocation" x="-398" y="-412"/>
         </view>
     </objects>
 </document>
