@@ -16,6 +16,7 @@
 #import "WXApi.h"
 #import "WXApiManager.h"
 #import <AlipaySDK/AlipaySDK.h>
+#import "SRNewFeaturesViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -97,7 +98,23 @@
     
     BasicMainTBC *tbc=[BasicMainTBC new];
     
-    self.window.rootViewController =tbc;
+    
+    
+    BOOL shouldShow = [SRNewFeaturesViewController sr_shouldShowNewFeature];
+    shouldShow = YES; // Set YES for test
+    if (shouldShow) {
+        NSArray *imageNames = @[@"newfeature1.jpg", @"newfeature2.jpg", @"newfeature4.jpg"];
+        SRNewFeaturesViewController *newFeaturesVC = [SRNewFeaturesViewController sr_newFeatureWithImageNames:imageNames
+                                                                                           rootViewController:tbc];
+        newFeaturesVC.hideSkipButton = NO; // show skip Button
+        self.window.rootViewController = newFeaturesVC;
+    } else {
+        self.window.rootViewController = tbc;
+    }
+    
+    
+    
+    
 }
 
 

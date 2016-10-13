@@ -38,6 +38,12 @@
     [self.plusBtn addPathItems:self.pathButtonArray];
     //必须加到父视图上
     [self.superview addSubview:self.plusBtn];
+    
+    
+    
+//     [self addSubview:self.plusBtn];
+    
+    
     UILabel *label = [[UILabel alloc]init];
     if (_title != nil) {
         label.text = _title;
@@ -50,6 +56,7 @@
     label.centerX = _plusBtn.centerX;
     label.centerY = CGRectGetMaxY(_plusBtn.frame) + ZYMagin;
     [self.superview addSubview:label];
+    
 }
 //重新绘制按钮
 - (void)layoutSubviews {

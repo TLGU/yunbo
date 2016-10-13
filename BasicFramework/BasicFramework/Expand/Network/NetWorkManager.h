@@ -46,6 +46,7 @@
  *  @param success
  *  @param failure
  */
+
 -(void)requestDataForGETWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure;
 /**
  *  上传文件

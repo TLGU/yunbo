@@ -34,7 +34,7 @@
     
     [self.view addSubview:containerVC.view];
     [self containerViewItemIndex:0 currentController:vc1];
-    [[NSNotificationCenter defaultCenter] postNotificationName:LoginStatus_Changed object:nil];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:LoginStatus_Changed object:nil];
     
     
 }

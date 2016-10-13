@@ -135,6 +135,8 @@
 		C86E127E1DAF3EF60054ABCE /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86E127A1DAF3EF60054ABCE /* GestureViewController.m */; };
 		C86E12831DAF41820054ABCE /* GestureTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86E12811DAF41820054ABCE /* GestureTestViewController.m */; };
 		C86E12841DAF41820054ABCE /* GestureTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C86E12821DAF41820054ABCE /* GestureTestViewController.xib */; };
+		C86E128B1DAF710F0054ABCE /* SRNewFeaturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86E128A1DAF710F0054ABCE /* SRNewFeaturesViewController.m */; };
+		C86E128E1DAF87220054ABCE /* MD5Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C86E128D1DAF87220054ABCE /* MD5Encryption.m */; };
 		C87896E01D9577BD00264115 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87896DE1D9577BD00264115 /* LoginViewController.m */; };
 		C87896E11D9577BD00264115 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87896DF1D9577BD00264115 /* LoginViewController.xib */; };
 		C87896E51D958A7B00264115 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87896E31D958A7B00264115 /* RegisterViewController.m */; };
@@ -463,6 +465,10 @@
 		C86E12801DAF41820054ABCE /* GestureTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureTestViewController.h; sourceTree = "<group>"; };
 		C86E12811DAF41820054ABCE /* GestureTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureTestViewController.m; sourceTree = "<group>"; };
 		C86E12821DAF41820054ABCE /* GestureTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GestureTestViewController.xib; sourceTree = "<group>"; };
+		C86E12891DAF710F0054ABCE /* SRNewFeaturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRNewFeaturesViewController.h; sourceTree = "<group>"; };
+		C86E128A1DAF710F0054ABCE /* SRNewFeaturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRNewFeaturesViewController.m; sourceTree = "<group>"; };
+		C86E128C1DAF87220054ABCE /* MD5Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Encryption.h; sourceTree = "<group>"; };
+		C86E128D1DAF87220054ABCE /* MD5Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Encryption.m; sourceTree = "<group>"; };
 		C87896DD1D9577BD00264115 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C87896DE1D9577BD00264115 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C87896DF1D9577BD00264115 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -936,6 +942,8 @@
 		364DA5931D6584F400F6F424 /* Network(网络) */ = {
 			isa = PBXGroup;
 			children = (
+				C86E128C1DAF87220054ABCE /* MD5Encryption.h */,
+				C86E128D1DAF87220054ABCE /* MD5Encryption.m */,
 				364DA5941D6584F400F6F424 /* NetWorkManager.h */,
 				364DA5951D6584F400F6F424 /* NetWorkManager.m */,
 			);
@@ -1015,6 +1023,7 @@
 		364DA6021D6584F400F6F424 /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				C86E12851DAF6B7C0054ABCE /* 引导页 */,
 				C86E12601DAF3E640054ABCE /* 手势密码 */,
 				C86E11DF1DAF2D1A0054ABCE /* 支付宝支付 */,
 				C8187E911DADF5A10083AC86 /* 微信支付 */,
@@ -1440,6 +1449,15 @@
 			name = "手势密码解锁测试";
 			sourceTree = "<group>";
 		};
+		C86E12851DAF6B7C0054ABCE /* 引导页 */ = {
+			isa = PBXGroup;
+			children = (
+				C86E12891DAF710F0054ABCE /* SRNewFeaturesViewController.h */,
+				C86E128A1DAF710F0054ABCE /* SRNewFeaturesViewController.m */,
+			);
+			path = "引导页";
+			sourceTree = "<group>";
+		};
 		C8A99CDD1D969F4C00633A0D /* YSLContainerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1686,6 +1704,7 @@
 			files = (
 				C8187E7F1DADE9520083AC86 /* UMShareMenuItem.m in Sources */,
 				C83048A91DACE269006FAE28 /* UIView+LBExtension.m in Sources */,
+				C86E128B1DAF710F0054ABCE /* SRNewFeaturesViewController.m in Sources */,
 				C83048A61DACE23B006FAE28 /* ZYTabBar.m in Sources */,
 				364DA6531D6584F400F6F424 /* UIScrollView+MJExtension.m in Sources */,
 				C8187EA61DAE030A0083AC86 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */,
@@ -1722,6 +1741,7 @@
 				364DA6331D6584F400F6F424 /* RootViewController.m in Sources */,
 				C86E12751DAF3E640054ABCE /* PCLockLabel.m in Sources */,
 				C8187E811DADE9520083AC86 /* UMSocialShareScrollView.m in Sources */,
+				C86E128E1DAF87220054ABCE /* MD5Encryption.m in Sources */,
 				C8187E401DADE5C40083AC86 /* README.md in Sources */,
 				C86E12411DAF2D1B0054ABCE /* Order.m in Sources */,
 				364DA6211D6584F400F6F424 /* UIBarButtonItem+DFYGExtension.m in Sources */,

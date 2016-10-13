@@ -3,7 +3,7 @@
 #define  KEY_DEVICE_UUID @"KEY_DEVICE_UUID"
 
 #import <MyUUID/SPIMyUUID.h>
-
+#import "MD5Encryption.h"
 #import "NetWorkManager.h"
 #define kTimeoutInterval  15
 
@@ -138,11 +138,14 @@ static NetWorkManager *network = nil;
     
     URL = [NSString stringWithFormat:@"%@%@",YGBaseURL,URL];
     
+    parameters=  [self constructParams:parameters];
+    
     [manager POST:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         /**
          *  get Cookies
          */
+        
 //        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
 //        if (![NSString isBlankString:[self getUserTokenIdInCookie:response.allHeaderFields[@"Set-Cookie"]]]) {
 //            
@@ -404,4 +407,65 @@ static UIViewController *tempVC = nil;
     [APPSINGLE DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
     [APPSINGLE DeleteValueInMyLocalStoreForKey:kReachability];
 }
+
+//构建传递参数
+
+-(NSDictionary *)constructParams:(NSMutableDictionary*)sender
+{
+    NSMutableDictionary *dict=[NSMutableDictionary dictionary];
+    NSString *usernme= [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
+    if (!usernme) {
+        usernme=@"";
+    }
+    dict[@"name"]=usernme;
+    dict[@"randCode"]=[self ret32bitString];
+    dict[@"encrpt"]=@"enAes";
+    dict[@"isEncryption"]=@"false";
+    dict[@"mode"]=@"2";
+    
+    NSString *paramters=  [self dictionaryToJson:sender];
+    dict[@"data"]=paramters;
+    NSString *key= [[NSUserDefaults standardUserDefaults] objectForKey:user_key_key];
+    NSString *text= [key stringByAppendingString:dict[@"randCode"]];
+    NSString *name= [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
+    if (!name) {
+        name=@"";
+    }
+    
+    NSString *tempKey=[MD5Encryption  md5by32:text];
+    NSString *mac=  [[tempKey stringByAppendingString:name] stringByAppendingString:paramters];
+    dict[@"mac"]=[MD5Encryption  md5by32:mac];
+    
+    
+   
+    return dict;
+    
+}
+-(NSString *)ret32bitString
+
+{
+    
+    char data[32];
+    
+    for (int x=0;x<32;data[x++] = (char)('A' + (arc4random_uniform(26))));
+    
+    return [[NSString alloc] initWithBytes:data length:32 encoding:NSUTF8StringEncoding];
+    
+}
+- (NSString*)dictionaryToJson:(NSDictionary *)dic
+
+{
+    
+    NSError *parseError = nil;
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+}
+
+
+
+
+
 @end

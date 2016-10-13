@@ -52,8 +52,8 @@
     
     
     [self addChildViewControllerWithClassname:[RootViewController description] imagename:@"1--VR专区_03hui" title:@"首页"];
-    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"11_03" title:@"动态"];
-    [self addChildViewControllerWithClassname:[UIViewController description]imagename:@"22_03" title:@"商城"];
+    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"11_03" title:@"活动"];
+    [self addChildViewControllerWithClassname:[UIViewController description]imagename:@"22_03" title:@"关注"];
     [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"5_03" title:@"我的"];
     
     

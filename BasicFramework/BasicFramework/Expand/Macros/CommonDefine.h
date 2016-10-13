@@ -111,6 +111,6 @@ return self;\
 ////微信 appKey
 //#define WEIXIN_APPKEY @"edbea80d435d3f79fddacb1ba948225a"
 
+#define user_name_key @"user_name_key"
 
-
-
+#define user_key_key @"user_key_key"
