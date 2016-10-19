@@ -76,7 +76,8 @@
      [self authWithPlatform:UMSocialPlatformType_QQ];
 }
     
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     
     [super viewDidLoad];
     
