@@ -13,6 +13,8 @@
 #import <AlipaySDK/AlipaySDK.h>
 #import "DataSigner.h"
 #import "GestureTestViewController.h"
+#import "ViewController.h"
+#import "ImageMergeTestVC.h"
 
 @interface TestViewController ()
 
@@ -29,6 +31,8 @@
     [super didReceiveMemoryWarning];
    
 }
+
+
 - (IBAction)loginTest:(id)sender {
      [[NSNotificationCenter defaultCenter] postNotificationName:LoginStatus_Changed object:nil];
 }
@@ -48,8 +52,31 @@
 - (IBAction)unlock:(id)sender {
     
     GestureTestViewController *vc=[[GestureTestViewController alloc] init];
+    
     [self.navigationController pushViewController:vc animated:YES];
+    
 }
+
+- (IBAction)ImageEditorAction:(id)sender
+{
+    ViewController *vc=[[ViewController alloc] init];
+    
+    [self pushVc:vc];
+}
+
+- (IBAction)imageMergeTest:(id)sender {
+    
+    ImageMergeTestVC *vc=[ImageMergeTestVC new];
+    [self pushVc:vc];
+    
+    
+    
+    
+}
+
+
+
+
 
 #pragma mark -
 #pragma mark   ==============点击订单模拟支付行为==============
