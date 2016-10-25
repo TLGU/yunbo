@@ -32,6 +32,8 @@
 		0F0662191DB7560700634656 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0662181DB7560700634656 /* ViewController.m */; };
 		0F06621F1DB76F2200634656 /* ImageMergeTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F06621D1DB76F2200634656 /* ImageMergeTestVC.m */; };
 		0F0662201DB76F2200634656 /* ImageMergeTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F06621E1DB76F2200634656 /* ImageMergeTestVC.xib */; };
+		0F97BDE31DBF29B10022F71F /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F97BDE21DBF29B10022F71F /* NetWorkManager.m */; };
+		0F97BDE61DBF29F40022F71F /* AccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F97BDE51DBF29F40022F71F /* AccountService.m */; };
 		36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A921D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
@@ -67,7 +69,6 @@
 		364DA6261D6584F400F6F424 /* UIImageView+YGUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5861D6584F400F6F424 /* UIImageView+YGUIImageView.m */; };
 		364DA6281D6584F400F6F424 /* UIScrollView+UITouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA58A1D6584F400F6F424 /* UIScrollView+UITouch.m */; };
 		364DA6291D6584F400F6F424 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA58C1D6584F400F6F424 /* UIView+Extension.m */; };
-		364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5951D6584F400F6F424 /* NetWorkManager.m */; };
 		364DA62B1D6584F400F6F424 /* AppSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5981D6584F400F6F424 /* AppSingle.m */; };
 		364DA62C1D6584F400F6F424 /* DFYGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA59A1D6584F400F6F424 /* DFYGProgressHUD.m */; };
 		364DA6301D6584F400F6F424 /* BasicMainNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5A61D6584F400F6F424 /* BasicMainNC.m */; };
@@ -241,6 +242,10 @@
 		0F06621C1DB76F2200634656 /* ImageMergeTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageMergeTestVC.h; path = ../ImageMergeTestVC.h; sourceTree = "<group>"; };
 		0F06621D1DB76F2200634656 /* ImageMergeTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageMergeTestVC.m; path = ../ImageMergeTestVC.m; sourceTree = "<group>"; };
 		0F06621E1DB76F2200634656 /* ImageMergeTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageMergeTestVC.xib; path = ../ImageMergeTestVC.xib; sourceTree = "<group>"; };
+		0F97BDE11DBF29B10022F71F /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
+		0F97BDE21DBF29B10022F71F /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
+		0F97BDE41DBF29F40022F71F /* AccountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountService.h; sourceTree = "<group>"; };
+		0F97BDE51DBF29F40022F71F /* AccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountService.m; sourceTree = "<group>"; };
 		36111A921D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -292,8 +297,6 @@
 		364DA5901D6584F400F6F424 /* CommonAppKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAppKey.h; sourceTree = "<group>"; };
 		364DA5911D6584F400F6F424 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		364DA5921D6584F400F6F424 /* HTTPURLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPURLDefine.h; sourceTree = "<group>"; };
-		364DA5941D6584F400F6F424 /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
-		364DA5951D6584F400F6F424 /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
 		364DA5971D6584F400F6F424 /* AppSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSingle.h; sourceTree = "<group>"; };
 		364DA5981D6584F400F6F424 /* AppSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSingle.m; sourceTree = "<group>"; };
 		364DA5991D6584F400F6F424 /* DFYGProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFYGProgressHUD.h; sourceTree = "<group>"; };
@@ -949,6 +952,8 @@
 		36111ABD1D6EE58C00A03BF4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				0F97BDE41DBF29F40022F71F /* AccountService.h */,
+				0F97BDE51DBF29F40022F71F /* AccountService.m */,
 				36111ABE1D6EE58C00A03BF4 /* Placeholder */,
 			);
 			path = Service;
@@ -1131,8 +1136,8 @@
 			children = (
 				C86E128C1DAF87220054ABCE /* MD5Encryption.h */,
 				C86E128D1DAF87220054ABCE /* MD5Encryption.m */,
-				364DA5941D6584F400F6F424 /* NetWorkManager.h */,
-				364DA5951D6584F400F6F424 /* NetWorkManager.m */,
+				0F97BDE11DBF29B10022F71F /* NetWorkManager.h */,
+				0F97BDE21DBF29B10022F71F /* NetWorkManager.m */,
 			);
 			name = "Network(网络)";
 			path = Network;
@@ -1915,7 +1920,6 @@
 				C8A99CD91D96564C00633A0D /* NHCustomLoadingAnimationView.m in Sources */,
 				C8187EA31DADF7710083AC86 /* WXMediaMessage+messageConstruct.m in Sources */,
 				C86E12741DAF3E640054ABCE /* PCCircleInfoView.m in Sources */,
-				364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */,
 				0F0661F71DB753DF00634656 /* CLClippingTool.m in Sources */,
 				0F0662041DB753DF00634656 /* CLImageToolBase.m in Sources */,
 				0F0662101DB753DF00634656 /* UIImage+Utility.m in Sources */,
@@ -1941,6 +1945,7 @@
 				0F06620E1DB753DF00634656 /* CLSplineInterpolator.m in Sources */,
 				364DA6541D6584F400F6F424 /* UIScrollView+MJRefresh.m in Sources */,
 				0F06620F1DB753DF00634656 /* UIDevice+SystemVersion.m in Sources */,
+				0F97BDE61DBF29F40022F71F /* AccountService.m in Sources */,
 				C86E12421DAF2D1B0054ABCE /* base64.m in Sources */,
 				0F0662121DB753DF00634656 /* _CLImageEditorViewController.m in Sources */,
 				C8187EAA1DAE30750083AC86 /* TestViewController.m in Sources */,
@@ -1954,6 +1959,7 @@
 				C86E128E1DAF87220054ABCE /* MD5Encryption.m in Sources */,
 				C8187E401DADE5C40083AC86 /* README.md in Sources */,
 				C86E12411DAF2D1B0054ABCE /* Order.m in Sources */,
+				0F97BDE31DBF29B10022F71F /* NetWorkManager.m in Sources */,
 				0F0661F31DB753DF00634656 /* CLImageEditorTheme.m in Sources */,
 				364DA6211D6584F400F6F424 /* UIBarButtonItem+DFYGExtension.m in Sources */,
 				0F06620A1DB753DF00634656 /* CLImageToolInfo+Private.m in Sources */,

@@ -1,6 +1,24 @@
 //
 //
+typedef NS_ENUM(NSInteger, NetworkResponseStatus) {
+    NetworkResponseStatusSuccess = 200,//操作成功
+    NetworkResponseStatusFailure = 300,//操作失败
+    NetworkResponseStatusWaiting = 502,//等待处理
+    NetworkResponseStatusDoing = 500,//处理中
+    NetworkResponseStatusWaitingResult=501,//等待结果
+    NetworkResponseStatusOrderNotExist=404,//订单不存在
+    NetworkResponseStatusWatingPay=201,//等待付款
+    NetworkResponseStatusWatingSendGoods=202,//等待发货
+    NetworkResponseStatusRefunded=204,//已退款
+    NetworkResponseStatusTransactionClosed=205//交易关闭
+};
 
+
+typedef NS_ENUM(NSUInteger, RequestMethod) {
+    RequestMethodPost=1,
+    RequestMethodGet
+    
+};
 
 /**
  *  获取Window

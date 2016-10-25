@@ -31,6 +31,15 @@
  *  主题颜色
  */
 #define kThemeColor UIColorFromRGBValue(0X0096f4)
+
+/**
+ 控件基调色
+ */
+
+
+#define base_control_color kRGB(24, 24, 24)
+
+
 /**
  *  主题辅助颜色（状态，提示等...）
  */
