@@ -11,7 +11,7 @@
 #import "BasicMainWebNC.h"
 #import "BasicMainNC.h"
 #import "ZYTabBar.h"
-
+#import "HomeViewController.h"
 
 
 @interface BasicMainTBC ()<ZYTabBarDelegate>
@@ -29,6 +29,7 @@
     
     // 拿到整个导航控制器的外观
     UITabBarItem * item = [UITabBarItem appearance];
+    
     item.titlePositionAdjustment = UIOffsetMake(0, 1.5);
     
     // 普通状态
@@ -50,15 +51,17 @@
     
     [super viewDidLoad];
     
+    [self addChildViewControllerWithClassname:[HomeViewController description] imagename:@"1--VR专区_03hui" title:@"首页"];
     
-    [self addChildViewControllerWithClassname:[RootViewController description] imagename:@"1--VR专区_03hui" title:@"首页"];
     [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"11_03" title:@"活动"];
+    
     [self addChildViewControllerWithClassname:[UIViewController description]imagename:@"22_03" title:@"关注"];
+    
     [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"5_03" title:@"我的"];
     
-    
-    
     [self configureZYPathButton];
+    
+    
     
 }
     

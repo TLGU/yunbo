@@ -33,7 +33,7 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMU-rY-mab">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-gM-uwt">
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pwd" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-gM-uwt">
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="ART-Zr-sh7"/>
                             </constraints>
@@ -58,7 +58,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vth-zE-8hI">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="ofC-O3-CiN">
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone1" translatesAutoresizingMaskIntoConstraints="NO" id="ofC-O3-CiN">
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="085-gP-g2J"/>
                             </constraints>
@@ -99,7 +99,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gR6-Co-8Io">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="veryfi_code" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-w4-pRL">
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safe" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-w4-pRL">
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="0rP-cq-z5z"/>
                             </constraints>
@@ -172,8 +172,8 @@
         </view>
     </objects>
     <resources>
-        <image name="lock" width="18" height="20"/>
-        <image name="phone" width="13" height="19"/>
-        <image name="veryfi_code" width="18" height="20"/>
+        <image name="phone1" width="12" height="20"/>
+        <image name="pwd" width="15" height="20"/>
+        <image name="safe" width="18" height="20"/>
     </resources>
 </document>
