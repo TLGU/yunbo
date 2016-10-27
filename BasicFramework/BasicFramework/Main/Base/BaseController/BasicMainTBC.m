@@ -10,11 +10,10 @@
 #import "RootViewController.h"
 #import "BasicMainWebNC.h"
 #import "BasicMainNC.h"
-#import "ZYTabBar.h"
 #import "HomeViewController.h"
-
-
-@interface BasicMainTBC ()<ZYTabBarDelegate>
+#import "UIImage+Image.h"
+#import "ZTTabBar.h"
+@interface BasicMainTBC ()<ZTTabBarDelegate>
 
 @end
 
@@ -46,25 +45,58 @@
     
     
 }
-    
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
-    [self addChildViewControllerWithClassname:[HomeViewController description] imagename:@"1--VR专区_03hui" title:@"首页"];
     
-    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"11_03" title:@"活动"];
     
-    [self addChildViewControllerWithClassname:[UIViewController description]imagename:@"22_03" title:@"关注"];
+  
     
-    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"5_03" title:@"我的"];
     
-    [self configureZYPathButton];
+//    self.tabBar.translucent = NO;
+//    self.tabBar.backgroundImage = [UIImage imageNamed:@"bar"];
+//    self.tabBar.tintColor = [UIColor blackColor];
+    
+    
+    [self setChildVC];
+    
+    [self setUpTabbar];
+    
+}
+- (void)setUpTabbar {
+    
+    ZTTabBar *tabBar = [[ZTTabBar alloc] init];
+    
+    tabBar.delegate = self;
+    // KVC：如果要修系统的某些属性，但被设为readOnly，就是用KVC，即setValue：forKey：。
+    
+    [self setValue:tabBar forKey:@"tabBar"];
+    
+}
+
+
+
+
+
+
+
+
+- (void)setChildVC {
+    
+    
+    [self addChildViewControllerWithClassname:[HomeViewController description] imagename:@"home" title:@"首页"];
+    
+    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"search" title:@"搜索"];
+    
+    [self addChildViewControllerWithClassname:[UIViewController description]imagename:@"guanzhu" title:@"关注"];
+    
+    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"me" title:@"我的"];
     
     
     
 }
-    
     // 添加子控制器
 - (void)addChildViewControllerWithClassname:(NSString *)classname
                                   imagename:(NSString *)imagename
@@ -80,62 +112,21 @@
 }
 
 
--(UIImage *)getBackImg{
+-(UIImage *)getBackImg
+{
     return  [UIImage createImageWithColor:[UIColor blackColor]];
 }
-
-- (void)configureZYPathButton
+#pragma ZTTabBarDelegate
+/**
+ *  加号按钮点击
+ */
+- (void)tabBarDidClickPlusButton:(ZTTabBar *)tabBar
 {
-    ZYTabBar *tabBar = [ZYTabBar new];
-    tabBar.delegate = self;
-    ZYPathItemButton *itemButton_1 = [[ZYPathItemButton alloc] initWithImage:[UIImage imageNamed:@"chooser-moment-icon-music"]
-                                                            highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-music-highlighted"]backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]
-                                      
-                                                  backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
-    
-    
-    ZYPathItemButton *itemButton_2 = [[ZYPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-place"]highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-place-highlighted"]backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
-    
-    
-    ZYPathItemButton *itemButton_3 = [[ZYPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-camera"]highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-camera-highlighted"]backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
-    
-    
-    ZYPathItemButton *itemButton_4 = [[ZYPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-thought"]highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-thought-highlighted"]backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
-    
-   
-    
-    
-    ZYPathItemButton *itemButton_5 = [[ZYPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-sleep"]highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-sleep-highlighted"]backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
-    tabBar.pathButtonArray = @[itemButton_1 , itemButton_2 , itemButton_3, itemButton_4 , itemButton_5];
-    tabBar.basicDuration = 0.5;
-    tabBar.allowSubItemRotation = YES;
-    tabBar.title = @"";
-    tabBar.bloomRadius = 100;
-    tabBar.allowCenterButtonRotation = YES;
-    tabBar.bloomAngel = 100;
-    //kvc实质是修改了系统的_tabBar
-    [self setValue:tabBar forKeyPath:@"tabBar"];
-    
+//    UIViewController *vc = [[UIViewController alloc] init];
+//    [self presentViewController:vc animated:YES completion:nil];
 }
-#pragma mark--ZYTabBarDelegate
-- (void)pathButton:(ZYPathButton *)ZYPathButton clickItemButtonAtIndex:(NSUInteger)itemButtonIndex {
-    NSLog(@" 点中了第%ld个按钮" , itemButtonIndex);
-    
-
-    
-    if (itemButtonIndex==0) {
-        
-         [[NSNotificationCenter defaultCenter] postNotificationName:LoginStatus_Changed object:nil];
-    }else{
-        
-       
-    }
-    
-    
-    
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
 }
-
-
-
 
 @end
