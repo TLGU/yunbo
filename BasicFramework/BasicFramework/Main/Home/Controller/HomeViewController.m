@@ -13,6 +13,7 @@
 #import "HomeHeaderView.h"
 #import "HotCell.h"
 #import "ZuoPinTableViewCell.h"
+#import "ProductionDetailVC.h"
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(strong,nonatomic)UITableView *tableView;
@@ -65,6 +66,8 @@ static NSString * zuopinCellId=@"ZuoPinCellID";
          [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZuoPinTableViewCell class]) bundle:nil] forCellReuseIdentifier:zuopinCellId];
         
         _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+        
+        
     }
     return _tableView;
 }
@@ -126,6 +129,9 @@ static NSString * zuopinCellId=@"ZuoPinCellID";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView  deselectRowAtIndexPath:indexPath animated:YES];
+    ProductionDetailVC *vc=[ProductionDetailVC new];
+    [self pushVc:vc];
+    
     
 }
 

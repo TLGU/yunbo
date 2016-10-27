@@ -36,6 +36,12 @@
 		0F97BDE61DBF29F40022F71F /* AccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F97BDE51DBF29F40022F71F /* AccountService.m */; };
 		0F97BDEA1DBF4A360022F71F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F97BDE81DBF4A360022F71F /* HomeViewController.m */; };
 		0F97BDEB1DBF4A360022F71F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F97BDE91DBF4A360022F71F /* HomeViewController.xib */; };
+		0FAABAB01DC24093008A0AF4 /* ProductionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAABAAE1DC24093008A0AF4 /* ProductionDetailVC.m */; };
+		0FAABAB11DC24093008A0AF4 /* ProductionDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAABAAF1DC24093008A0AF4 /* ProductionDetailVC.xib */; };
+		0FAABAB51DC24214008A0AF4 /* ProductionDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAABAB41DC24214008A0AF4 /* ProductionDetailHeader.m */; };
+		0FAABAB81DC243C9008A0AF4 /* ProductionDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAABAB71DC243C9008A0AF4 /* ProductionDetailHeader.xib */; };
+		0FAABABC1DC25B21008A0AF4 /* ProductionDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAABABA1DC25B21008A0AF4 /* ProductionDetailCell.m */; };
+		0FAABABD1DC25B21008A0AF4 /* ProductionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAABABB1DC25B21008A0AF4 /* ProductionDetailCell.xib */; };
 		0FFC8FC51DC1C8BE003DA47A /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC8FC41DC1C8BE003DA47A /* UIImage+Image.m */; };
 		0FFC8FCE1DC1D1E6003DA47A /* ZTDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC8FC71DC1D1E6003DA47A /* ZTDropdownMenu.m */; };
 		0FFC8FCF1DC1D1E6003DA47A /* ZTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC8FC91DC1D1E6003DA47A /* ZTSearchBar.m */; };
@@ -269,6 +275,15 @@
 		0F97BDE71DBF4A360022F71F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		0F97BDE81DBF4A360022F71F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		0F97BDE91DBF4A360022F71F /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		0FAABAAD1DC24093008A0AF4 /* ProductionDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductionDetailVC.h; sourceTree = "<group>"; };
+		0FAABAAE1DC24093008A0AF4 /* ProductionDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductionDetailVC.m; sourceTree = "<group>"; };
+		0FAABAAF1DC24093008A0AF4 /* ProductionDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductionDetailVC.xib; sourceTree = "<group>"; };
+		0FAABAB31DC24214008A0AF4 /* ProductionDetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductionDetailHeader.h; sourceTree = "<group>"; };
+		0FAABAB41DC24214008A0AF4 /* ProductionDetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductionDetailHeader.m; sourceTree = "<group>"; };
+		0FAABAB71DC243C9008A0AF4 /* ProductionDetailHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductionDetailHeader.xib; sourceTree = "<group>"; };
+		0FAABAB91DC25B21008A0AF4 /* ProductionDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductionDetailCell.h; sourceTree = "<group>"; };
+		0FAABABA1DC25B21008A0AF4 /* ProductionDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductionDetailCell.m; sourceTree = "<group>"; };
+		0FAABABB1DC25B21008A0AF4 /* ProductionDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductionDetailCell.xib; sourceTree = "<group>"; };
 		0FFC8FC31DC1C8BE003DA47A /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		0FFC8FC41DC1C8BE003DA47A /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		0FFC8FC61DC1D1E6003DA47A /* ZTDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTDropdownMenu.h; sourceTree = "<group>"; };
@@ -783,6 +798,29 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		0FAABAB21DC241DF008A0AF4 /* 作品详情页面 */ = {
+			isa = PBXGroup;
+			children = (
+				0FAABAB31DC24214008A0AF4 /* ProductionDetailHeader.h */,
+				0FAABAB41DC24214008A0AF4 /* ProductionDetailHeader.m */,
+				0FAABAB71DC243C9008A0AF4 /* ProductionDetailHeader.xib */,
+				0FAABAB91DC25B21008A0AF4 /* ProductionDetailCell.h */,
+				0FAABABA1DC25B21008A0AF4 /* ProductionDetailCell.m */,
+				0FAABABB1DC25B21008A0AF4 /* ProductionDetailCell.xib */,
+			);
+			name = "作品详情页面";
+			sourceTree = "<group>";
+		};
+		0FAABAB61DC2423B008A0AF4 /* 作品详情 */ = {
+			isa = PBXGroup;
+			children = (
+				0FAABAAD1DC24093008A0AF4 /* ProductionDetailVC.h */,
+				0FAABAAE1DC24093008A0AF4 /* ProductionDetailVC.m */,
+				0FAABAAF1DC24093008A0AF4 /* ProductionDetailVC.xib */,
+			);
+			name = "作品详情";
+			sourceTree = "<group>";
+		};
 		0FFC8FD71DC1E506003DA47A /* LBBannerKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -921,6 +959,7 @@
 		36111A9E1D6EE58C00A03BF4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0FAABAB61DC2423B008A0AF4 /* 作品详情 */,
 				36111A9F1D6EE58C00A03BF4 /* Placeholder */,
 				0F97BDE71DBF4A360022F71F /* HomeViewController.h */,
 				0F97BDE81DBF4A360022F71F /* HomeViewController.m */,
@@ -956,6 +995,7 @@
 		36111AA61D6EE58C00A03BF4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0FAABAB21DC241DF008A0AF4 /* 作品详情页面 */,
 				36111AA71D6EE58C00A03BF4 /* Placeholder */,
 				0FFC8FD21DC1E185003DA47A /* HomeHeaderView.h */,
 				0FFC8FD31DC1E185003DA47A /* HomeHeaderView.m */,
@@ -1906,6 +1946,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FAABAB11DC24093008A0AF4 /* ProductionDetailVC.xib in Resources */,
 				36111AE31D6EE63700A03BF4 /* LaunchScreen.storyboard in Resources */,
 				0F0662201DB76F2200634656 /* ImageMergeTestVC.xib in Resources */,
 				0F0661F11DB753DF00634656 /* CLImageEditor.bundle in Resources */,
@@ -1928,6 +1969,7 @@
 				C8187E7E1DADE9520083AC86 /* UMSocialSDKResources.bundle in Resources */,
 				36111AC91D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C8187E741DADE9520083AC86 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				0FAABABD1DC25B21008A0AF4 /* ProductionDetailCell.xib in Resources */,
 				0FFC8FF11DC1E506003DA47A /* index_banner3@2x.jpg in Resources */,
 				C8187E7B1DADE9520083AC86 /* README.txt in Resources */,
 				C86E12841DAF41820054ABCE /* GestureTestViewController.xib in Resources */,
@@ -1955,6 +1997,7 @@
 				36111ADE1D6EE63200A03BF4 /* Assets.xcassets in Resources */,
 				0FFC8FF21DC1E506003DA47A /* index_banner4@2x.jpg in Resources */,
 				0F97BDEB1DBF4A360022F71F /* HomeViewController.xib in Resources */,
+				0FAABAB81DC243C9008A0AF4 /* ProductionDetailHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2050,6 +2093,7 @@
 				C86E12701DAF3E640054ABCE /* PCCircle.m in Sources */,
 				0FFC8FED1DC1E506003DA47A /* LBPageControl.m in Sources */,
 				364DA6291D6584F400F6F424 /* UIView+Extension.m in Sources */,
+				0FAABAB51DC24214008A0AF4 /* ProductionDetailHeader.m in Sources */,
 				364DA61D1D6584F400F6F424 /* NSObject+YGTool.m in Sources */,
 				364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */,
 				364DA6521D6584F400F6F424 /* MJRefreshHeaderView.m in Sources */,
@@ -2061,6 +2105,7 @@
 				C8187E991DADF5AE0083AC86 /* WXApiRequestHandler.m in Sources */,
 				364DA6251D6584F400F6F424 /* UIImage+SPIExtension.m in Sources */,
 				0F0661F41DB753DF00634656 /* CLImageToolInfo.m in Sources */,
+				0FAABABC1DC25B21008A0AF4 /* ProductionDetailCell.m in Sources */,
 				0FFC8FCE1DC1D1E6003DA47A /* ZTDropdownMenu.m in Sources */,
 				C87896E51D958A7B00264115 /* RegisterViewController.m in Sources */,
 				0FFC8FD11DC1D1E6003DA47A /* ZTTitleButton.m in Sources */,
@@ -2121,6 +2166,7 @@
 				0F06621F1DB76F2200634656 /* ImageMergeTestVC.m in Sources */,
 				0FFC8FD41DC1E185003DA47A /* HomeHeaderView.m in Sources */,
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,
+				0FAABAB01DC24093008A0AF4 /* ProductionDetailVC.m in Sources */,
 				C8A99CE31D969F4D00633A0D /* YSLScrollMenuView.m in Sources */,
 				C8187E411DADE5C40083AC86 /* SVIndefiniteAnimatedView.m in Sources */,
 				364DA62C1D6584F400F6F424 /* DFYGProgressHUD.m in Sources */,
