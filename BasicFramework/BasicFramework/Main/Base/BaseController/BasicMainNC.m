@@ -44,7 +44,7 @@
     {
         UIButton *backbutton=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
         
-        [backbutton setImage:[UIImage imageNamed:@"back_img"] forState:UIControlStateNormal];
+        [backbutton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         
         [backbutton setContentEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
         
