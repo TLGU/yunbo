@@ -16,7 +16,7 @@
 #import "ViewController.h"
 #import "ImageMergeTestVC.h"
 
-@interface TestViewController ()
+@interface TestViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIActionSheetDelegate>
 
 @end
 
@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title=@"独立功能测试";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,7 +33,59 @@
    
 }
 
+<<<<<<< HEAD
 
+=======
+- (IBAction)ImageAdjustAction:(id)sender {
+    
+    [self pushedNewBtn];
+}
+#pragma mark- CLImageEditor delegate
+
+//- (void)imageEditor:(CLImageEditor *)editor didFinishEdittingWithImage:(UIImage *)image
+//{
+//    _imageView.image = image;
+//    [self refreshImageView];
+//    
+//    [editor dismissViewControllerAnimated:YES completion:nil];
+//}
+//
+//- (void)imageEditor:(CLImageEditor *)editor willDismissWithImageView:(UIImageView *)imageView canceled:(BOOL)canceled
+//{
+//    [self refreshImageView];
+//}
+
+#pragma mark- Actionsheet delegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex==actionSheet.cancelButtonIndex){
+        return;
+    }
+    
+    UIImagePickerControllerSourceType type = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    if([UIImagePickerController isSourceTypeAvailable:type]){
+        if(buttonIndex==0 && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+            type = UIImagePickerControllerSourceTypeCamera;
+        }
+        
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.allowsEditing = NO;
+        picker.delegate   = self;
+        picker.sourceType = type;
+        
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+}
+
+
+- (void)pushedNewBtn
+{
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"请选择" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"照相", @"相册选取", nil];
+    [sheet showInView:self.view.window];
+}
+>>>>>>> origin/branch-1
 - (IBAction)loginTest:(id)sender {
      [[NSNotificationCenter defaultCenter] postNotificationName:LoginStatus_Changed object:nil];
 }

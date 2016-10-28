@@ -10,11 +10,19 @@
 #import "RootViewController.h"
 #import "BasicMainWebNC.h"
 #import "BasicMainNC.h"
+<<<<<<< HEAD
 #import "HomeViewController.h"
 #import "UIImage+Image.h"
 #import "ZTTabBar.h"
 #import "MEViewController.h"
 @interface BasicMainTBC ()<ZTTabBarDelegate>
+=======
+#import "ZYTabBar.h"
+
+#import "TestViewController.h"
+
+@interface BasicMainTBC ()<ZYTabBarDelegate>
+>>>>>>> origin/branch-1
 
 @end
 
@@ -98,10 +106,24 @@
     
     
 }
+<<<<<<< HEAD
     // 添加子控制器
 - (void)addChildViewControllerWithClassname:(NSString *)classname
                                   imagename:(NSString *)imagename
                                       title:(NSString *)title {
+=======
+#pragma mark--ZYTabBarDelegate
+- (void)pathButton:(ZYPathButton *)ZYPathButton clickItemButtonAtIndex:(NSUInteger)itemButtonIndex
+{
+    NSLog(@" 点中了第%ld个按钮" , itemButtonIndex);
+    if (itemButtonIndex==0)
+    {
+        TestViewController *vc=[TestViewController new];
+        UINavigationController *nav=  (UINavigationController *)self.selectedViewController;
+        [nav pushViewController:vc animated:YES];
+    }
+    
+>>>>>>> origin/branch-1
     
     UIViewController *vc = [[NSClassFromString(classname) alloc] init];
     BasicMainNC *nav = [[BasicMainNC alloc] initWithRootViewController:vc];
