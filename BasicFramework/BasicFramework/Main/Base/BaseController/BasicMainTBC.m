@@ -12,7 +12,7 @@
 #import "BasicMainNC.h"
 #import "ZYTabBar.h"
 
-
+#import "TestViewController.h"
 
 @interface BasicMainTBC ()<ZYTabBarDelegate>
 
@@ -115,17 +115,14 @@
     
 }
 #pragma mark--ZYTabBarDelegate
-- (void)pathButton:(ZYPathButton *)ZYPathButton clickItemButtonAtIndex:(NSUInteger)itemButtonIndex {
+- (void)pathButton:(ZYPathButton *)ZYPathButton clickItemButtonAtIndex:(NSUInteger)itemButtonIndex
+{
     NSLog(@" 点中了第%ld个按钮" , itemButtonIndex);
-    
-
-    
-    if (itemButtonIndex==0) {
-        
-         [[NSNotificationCenter defaultCenter] postNotificationName:LoginStatus_Changed object:nil];
-    }else{
-        
-       
+    if (itemButtonIndex==0)
+    {
+        TestViewController *vc=[TestViewController new];
+        UINavigationController *nav=  (UINavigationController *)self.selectedViewController;
+        [nav pushViewController:vc animated:YES];
     }
     
     

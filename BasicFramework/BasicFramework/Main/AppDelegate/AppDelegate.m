@@ -101,7 +101,7 @@
     
     
     BOOL shouldShow = [SRNewFeaturesViewController sr_shouldShowNewFeature];
-    shouldShow = YES; // Set YES for test
+//    shouldShow = YES; // Set YES for test
     if (shouldShow) {
         NSArray *imageNames = @[@"newfeature1.jpg", @"newfeature2.jpg", @"newfeature4.jpg"];
         SRNewFeaturesViewController *newFeaturesVC = [SRNewFeaturesViewController sr_newFeatureWithImageNames:imageNames

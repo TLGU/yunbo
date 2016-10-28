@@ -16,10 +16,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMW-nq-vpK">
-                    <frame key="frameInset" minX="126" minY="268" width="112" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMW-nq-vpK">
                     <state key="normal" title="点击登陆测试">
-                        <color key="titleColor" red="0.96235211610139892" green="0.99600559912964459" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="loginTest:" destination="-1" eventType="touchUpInside" id="ohW-xb-t3t"/>
@@ -27,7 +26,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2O1-WL-35e">
                     <state key="normal" title="点击微信支付测试">
-                        <color key="titleColor" red="0.96235211610000004" green="0.99600559909999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="payTest:" destination="-1" eventType="touchUpInside" id="c3o-5V-Q9R"/>
@@ -35,16 +34,15 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrP-tO-x5A">
                     <state key="normal" title="点击分享测试">
-                        <color key="titleColor" red="0.96235211610000004" green="0.99600559909999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="shareTest:" destination="-1" eventType="touchUpInside" id="8j3-pM-ATb"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZW1-PH-Rap">
-                    <frame key="frameInset" minX="130" minY="226" width="115" height="26"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZW1-PH-Rap">
                     <state key="normal" title="支付宝支付测试">
-                        <color key="titleColor" red="0.96235211610000004" green="0.99600559909999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="zfbPayTest:" destination="-1" eventType="touchUpInside" id="MOQ-e2-dbZ"/>
@@ -52,10 +50,16 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7M-j1-aZA">
                     <state key="normal" title="手势密码解锁">
-                        <color key="titleColor" red="0.96235211610000004" green="0.99600559909999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="unlock:" destination="-1" eventType="touchUpInside" id="Lz9-qJ-lO3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gs1-a2-6Dh">
+                    <state key="normal" title="点击图像调整测试"/>
+                    <connections>
+                        <action selector="ImageAdjustAction:" destination="-1" eventType="touchUpInside" id="itE-v1-TV6"/>
                     </connections>
                 </button>
             </subviews>
@@ -66,9 +70,19 @@
                 <constraint firstItem="2O1-WL-35e" firstAttribute="top" secondItem="IMW-nq-vpK" secondAttribute="bottom" constant="20.5" id="90w-k7-mLM"/>
                 <constraint firstItem="MrP-tO-x5A" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Sh-GI-oNA"/>
                 <constraint firstItem="IMW-nq-vpK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DAx-I5-ubb"/>
+                <constraint firstItem="ZW1-PH-Rap" firstAttribute="width" secondItem="W7M-j1-aZA" secondAttribute="width" id="DZ1-9P-QfW"/>
+                <constraint firstItem="ZW1-PH-Rap" firstAttribute="height" secondItem="W7M-j1-aZA" secondAttribute="height" id="JLp-9U-HUQ"/>
+                <constraint firstItem="2O1-WL-35e" firstAttribute="width" secondItem="W7M-j1-aZA" secondAttribute="width" id="Ne4-uc-Sng"/>
+                <constraint firstItem="2O1-WL-35e" firstAttribute="height" secondItem="W7M-j1-aZA" secondAttribute="height" id="ODr-0E-EIh"/>
+                <constraint firstItem="MrP-tO-x5A" firstAttribute="height" secondItem="W7M-j1-aZA" secondAttribute="height" id="R9U-nT-xCS"/>
                 <constraint firstItem="ZW1-PH-Rap" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SQ3-fD-Gic"/>
+                <constraint firstItem="IMW-nq-vpK" firstAttribute="width" secondItem="W7M-j1-aZA" secondAttribute="width" id="VEN-Tq-fAO"/>
                 <constraint firstItem="2O1-WL-35e" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Xpl-IG-hyN"/>
                 <constraint firstItem="2O1-WL-35e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zss-8r-SOh"/>
+                <constraint firstItem="IMW-nq-vpK" firstAttribute="height" secondItem="W7M-j1-aZA" secondAttribute="height" id="bhH-IJ-v71"/>
+                <constraint firstItem="MrP-tO-x5A" firstAttribute="width" secondItem="W7M-j1-aZA" secondAttribute="width" id="dTy-WP-EpJ"/>
+                <constraint firstItem="Gs1-a2-6Dh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="edM-Ba-Err"/>
+                <constraint firstItem="W7M-j1-aZA" firstAttribute="top" secondItem="Gs1-a2-6Dh" secondAttribute="bottom" constant="8" id="ji1-NH-F5G"/>
                 <constraint firstItem="IMW-nq-vpK" firstAttribute="top" secondItem="ZW1-PH-Rap" secondAttribute="bottom" constant="28" id="rz5-5T-wGy"/>
                 <constraint firstItem="MrP-tO-x5A" firstAttribute="top" secondItem="2O1-WL-35e" secondAttribute="bottom" constant="19.5" id="sRn-k9-aHz"/>
             </constraints>

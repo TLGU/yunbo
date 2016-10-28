@@ -137,6 +137,14 @@
 		C86E12841DAF41820054ABCE /* GestureTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C86E12821DAF41820054ABCE /* GestureTestViewController.xib */; };
 		C86E128B1DAF710F0054ABCE /* SRNewFeaturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86E128A1DAF710F0054ABCE /* SRNewFeaturesViewController.m */; };
 		C86E128E1DAF87220054ABCE /* MD5Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C86E128D1DAF87220054ABCE /* MD5Encryption.m */; };
+		C86E12911DB082960054ABCE /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C86E12901DB082960054ABCE /* WaterFlowLayout.m */; };
+		C86E12951DB084BF0054ABCE /* RootCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C86E12931DB084BF0054ABCE /* RootCollectionViewCell.m */; };
+		C86E12961DB084BF0054ABCE /* RootCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C86E12941DB084BF0054ABCE /* RootCollectionViewCell.xib */; };
+		C876DA541DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C876DA521DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.m */; };
+		C876DA551DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C876DA531DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.xib */; };
+		C876DA591DB0F40500DCD816 /* PuBuLiuLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C876DA581DB0F40500DCD816 /* PuBuLiuLayout.m */; };
+		C876DA5C1DB0FAC900DCD816 /* ToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C876DA5B1DB0FAC900DCD816 /* ToViewController.m */; };
+		C876DA5F1DB0FB2C00DCD816 /* CustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C876DA5E1DB0FB2C00DCD816 /* CustomTransition.m */; };
 		C87896E01D9577BD00264115 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87896DE1D9577BD00264115 /* LoginViewController.m */; };
 		C87896E11D9577BD00264115 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87896DF1D9577BD00264115 /* LoginViewController.xib */; };
 		C87896E51D958A7B00264115 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87896E31D958A7B00264115 /* RegisterViewController.m */; };
@@ -231,8 +239,8 @@
 		364DA5A81D6584F400F6F424 /* BasicMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicMainVC.m; sourceTree = "<group>"; };
 		364DA5A91D6584F400F6F424 /* BasicMainWebNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicMainWebNC.h; sourceTree = "<group>"; };
 		364DA5AA1D6584F400F6F424 /* BasicMainWebNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicMainWebNC.m; sourceTree = "<group>"; };
-		364DA5AB1D6584F400F6F424 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		364DA5AC1D6584F400F6F424 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		364DA5AB1D6584F400F6F424 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../../Base/BaseController/RootViewController.h; sourceTree = "<group>"; };
+		364DA5AC1D6584F400F6F424 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../../Base/BaseController/RootViewController.m; sourceTree = "<group>"; };
 		364DA6041D6584F400F6F424 /* LYLIMGBrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLIMGBrowse.h; sourceTree = "<group>"; };
 		364DA6051D6584F400F6F424 /* LYLIMGBrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLIMGBrowse.m; sourceTree = "<group>"; };
 		364DA6061D6584F400F6F424 /* LYLIMGScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLIMGScrollView.h; sourceTree = "<group>"; };
@@ -469,6 +477,20 @@
 		C86E128A1DAF710F0054ABCE /* SRNewFeaturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRNewFeaturesViewController.m; sourceTree = "<group>"; };
 		C86E128C1DAF87220054ABCE /* MD5Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Encryption.h; sourceTree = "<group>"; };
 		C86E128D1DAF87220054ABCE /* MD5Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Encryption.m; sourceTree = "<group>"; };
+		C86E128F1DB082960054ABCE /* WaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayout.h; sourceTree = "<group>"; };
+		C86E12901DB082960054ABCE /* WaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
+		C86E12921DB084BF0054ABCE /* RootCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootCollectionViewCell.h; sourceTree = "<group>"; };
+		C86E12931DB084BF0054ABCE /* RootCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootCollectionViewCell.m; sourceTree = "<group>"; };
+		C86E12941DB084BF0054ABCE /* RootCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootCollectionViewCell.xib; sourceTree = "<group>"; };
+		C876DA511DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexCollectionReusableViewHeader.h; sourceTree = "<group>"; };
+		C876DA521DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexCollectionReusableViewHeader.m; sourceTree = "<group>"; };
+		C876DA531DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionReusableViewHeader.xib; sourceTree = "<group>"; };
+		C876DA571DB0F40500DCD816 /* PuBuLiuLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuBuLiuLayout.h; sourceTree = "<group>"; };
+		C876DA581DB0F40500DCD816 /* PuBuLiuLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuBuLiuLayout.m; sourceTree = "<group>"; };
+		C876DA5A1DB0FAC900DCD816 /* ToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToViewController.h; sourceTree = "<group>"; };
+		C876DA5B1DB0FAC900DCD816 /* ToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToViewController.m; sourceTree = "<group>"; };
+		C876DA5D1DB0FB2C00DCD816 /* CustomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTransition.h; sourceTree = "<group>"; };
+		C876DA5E1DB0FB2C00DCD816 /* CustomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTransition.m; sourceTree = "<group>"; };
 		C87896DD1D9577BD00264115 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C87896DE1D9577BD00264115 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C87896DF1D9577BD00264115 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -604,8 +626,8 @@
 		36111A9E1D6EE58C00A03BF4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C8A99CE51D969FDB00633A0D /* VR */,
-				C8A99CE41D969FBC00633A0D /* 影视 */,
+				364DA5AB1D6584F400F6F424 /* RootViewController.h */,
+				364DA5AC1D6584F400F6F424 /* RootViewController.m */,
 				36111A9F1D6EE58C00A03BF4 /* Placeholder */,
 			);
 			path = Controller;
@@ -639,6 +661,12 @@
 			isa = PBXGroup;
 			children = (
 				36111AA71D6EE58C00A03BF4 /* Placeholder */,
+				C86E12921DB084BF0054ABCE /* RootCollectionViewCell.h */,
+				C86E12931DB084BF0054ABCE /* RootCollectionViewCell.m */,
+				C86E12941DB084BF0054ABCE /* RootCollectionViewCell.xib */,
+				C876DA511DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.h */,
+				C876DA521DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.m */,
+				C876DA531DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -746,6 +774,8 @@
 		36111AB91D6EE58C00A03BF4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C86E128F1DB082960054ABCE /* WaterFlowLayout.h */,
+				C86E12901DB082960054ABCE /* WaterFlowLayout.m */,
 				36111ABA1D6EE58C00A03BF4 /* Placeholder */,
 			);
 			path = Model;
@@ -1012,8 +1042,6 @@
 				364DA5A81D6584F400F6F424 /* BasicMainVC.m */,
 				364DA5A91D6584F400F6F424 /* BasicMainWebNC.h */,
 				364DA5AA1D6584F400F6F424 /* BasicMainWebNC.m */,
-				364DA5AB1D6584F400F6F424 /* RootViewController.h */,
-				364DA5AC1D6584F400F6F424 /* RootViewController.m */,
 				C8A99CDA1D965A1200633A0D /* BasicMainTBC.h */,
 				C8A99CDB1D965A1200633A0D /* BasicMainTBC.m */,
 			);
@@ -1023,6 +1051,8 @@
 		364DA6021D6584F400F6F424 /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				C8A7C1AA1DB45F7E00363E02 /* 图像处理 */,
+				C876DA561DB0F3F600DCD816 /* 瀑布流 */,
 				C86E12851DAF6B7C0054ABCE /* 引导页 */,
 				C86E12601DAF3E640054ABCE /* 手势密码 */,
 				C86E11DF1DAF2D1A0054ABCE /* 支付宝支付 */,
@@ -1438,6 +1468,10 @@
 		C86E12761DAF3EE00054ABCE /* 手势密码解锁测试 */ = {
 			isa = PBXGroup;
 			children = (
+				C876DA5D1DB0FB2C00DCD816 /* CustomTransition.h */,
+				C876DA5E1DB0FB2C00DCD816 /* CustomTransition.m */,
+				C876DA5A1DB0FAC900DCD816 /* ToViewController.h */,
+				C876DA5B1DB0FAC900DCD816 /* ToViewController.m */,
 				C86E12771DAF3EF60054ABCE /* GestureVerifyViewController.h */,
 				C86E12781DAF3EF60054ABCE /* GestureVerifyViewController.m */,
 				C86E12791DAF3EF60054ABCE /* GestureViewController.h */,
@@ -1458,6 +1492,22 @@
 			path = "引导页";
 			sourceTree = "<group>";
 		};
+		C876DA561DB0F3F600DCD816 /* 瀑布流 */ = {
+			isa = PBXGroup;
+			children = (
+				C876DA571DB0F40500DCD816 /* PuBuLiuLayout.h */,
+				C876DA581DB0F40500DCD816 /* PuBuLiuLayout.m */,
+			);
+			path = "瀑布流";
+			sourceTree = "<group>";
+		};
+		C8A7C1AA1DB45F7E00363E02 /* 图像处理 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "图像处理";
+			sourceTree = "<group>";
+		};
 		C8A99CDD1D969F4C00633A0D /* YSLContainerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1467,20 +1517,6 @@
 				C8A99CE11D969F4C00633A0D /* YSLScrollMenuView.m */,
 			);
 			path = YSLContainerViewController;
-			sourceTree = "<group>";
-		};
-		C8A99CE41D969FBC00633A0D /* 影视 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "影视";
-			sourceTree = "<group>";
-		};
-		C8A99CE51D969FDB00633A0D /* VR */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = VR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1601,6 +1637,7 @@
 				36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				36111AC81D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C8187E771DADE9520083AC86 /* WeiboSDK.bundle in Resources */,
+				C876DA551DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.xib in Resources */,
 				C87896E61D958A7B00264115 /* RegisterViewController.xib in Resources */,
 				36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				36111AE61D6EE67500A03BF4 /* Placeholder in Resources */,
@@ -1613,6 +1650,7 @@
 				C8187E741DADE9520083AC86 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				C8187E7B1DADE9520083AC86 /* README.txt in Resources */,
 				C86E12841DAF41820054ABCE /* GestureTestViewController.xib in Resources */,
+				C86E12961DB084BF0054ABCE /* RootCollectionViewCell.xib in Resources */,
 				36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */,
 				364DA64E1D6584F400F6F424 /* MJRefresh.bundle in Resources */,
 				C8187EAB1DAE30750083AC86 /* TestViewController.xib in Resources */,
@@ -1721,6 +1759,7 @@
 				364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */,
 				C83048A51DACE23B006FAE28 /* ZYPathItemButton.m in Sources */,
 				364DA6521D6584F400F6F424 /* MJRefreshHeaderView.m in Sources */,
+				C86E12911DB082960054ABCE /* WaterFlowLayout.m in Sources */,
 				C8187E9D1DADF70E0083AC86 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				C83048A41DACE23B006FAE28 /* ZYPathButton.m in Sources */,
 				364DA6511D6584F400F6F424 /* MJRefreshFooterView.m in Sources */,
@@ -1740,8 +1779,10 @@
 				C86E12491DAF2D1B0054ABCE /* RSADataVerifier.m in Sources */,
 				364DA6331D6584F400F6F424 /* RootViewController.m in Sources */,
 				C86E12751DAF3E640054ABCE /* PCLockLabel.m in Sources */,
+				C876DA541DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.m in Sources */,
 				C8187E811DADE9520083AC86 /* UMSocialShareScrollView.m in Sources */,
 				C86E128E1DAF87220054ABCE /* MD5Encryption.m in Sources */,
+				C876DA591DB0F40500DCD816 /* PuBuLiuLayout.m in Sources */,
 				C8187E401DADE5C40083AC86 /* README.md in Sources */,
 				C86E12411DAF2D1B0054ABCE /* Order.m in Sources */,
 				364DA6211D6584F400F6F424 /* UIBarButtonItem+DFYGExtension.m in Sources */,
@@ -1763,12 +1804,15 @@
 				C8187E801DADE9520083AC86 /* UMShareMenuSelectionView.m in Sources */,
 				364DA62B1D6584F400F6F424 /* AppSingle.m in Sources */,
 				364DA6501D6584F400F6F424 /* MJRefreshConst.m in Sources */,
+				C86E12951DB084BF0054ABCE /* RootCollectionViewCell.m in Sources */,
 				364DA64C1D6584F400F6F424 /* LYLIMGScrollView.m in Sources */,
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,
+				C876DA5F1DB0FB2C00DCD816 /* CustomTransition.m in Sources */,
 				C8A99CE31D969F4D00633A0D /* YSLScrollMenuView.m in Sources */,
 				C8187E411DADE5C40083AC86 /* SVIndefiniteAnimatedView.m in Sources */,
 				364DA62C1D6584F400F6F424 /* DFYGProgressHUD.m in Sources */,
 				C86E12721DAF3E640054ABCE /* PCCircleViewConst.m in Sources */,
+				C876DA5C1DB0FAC900DCD816 /* ToViewController.m in Sources */,
 				364DA6311D6584F400F6F424 /* BasicMainVC.m in Sources */,
 				364DA64F1D6584F400F6F424 /* MJRefreshBaseView.m in Sources */,
 				C86E12451DAF2D1B0054ABCE /* MD5DataSigner.m in Sources */,
