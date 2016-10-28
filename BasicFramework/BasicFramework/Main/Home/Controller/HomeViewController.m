@@ -14,7 +14,6 @@
 #import "HotCell.h"
 #import "ZuoPinTableViewCell.h"
 #import "ProductionDetailVC.h"
-#import "ProductionListVC.h"
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(strong,nonatomic)UITableView *tableView;
@@ -81,7 +80,7 @@ static NSString * zuopinCellId=@"ZuoPinCellID";
 {
     
     [super viewDidLoad];
-//    self.navigationController.navigationBarHidden=YES;
+    self.navigationController.navigationBarHidden=YES;
     
     [self.view addSubview:self.tableView];
     
@@ -90,16 +89,6 @@ static NSString * zuopinCellId=@"ZuoPinCellID";
     
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden=YES;
-    
-}
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden=NO;
-    
-}
 
 
 
@@ -139,10 +128,8 @@ static NSString * zuopinCellId=@"ZuoPinCellID";
 #pragma mark--UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
     [tableView  deselectRowAtIndexPath:indexPath animated:YES];
-    ProductionListVC *vc=[ProductionListVC new];
+    ProductionDetailVC *vc=[ProductionDetailVC new];
     [self pushVc:vc];
     
     

@@ -14,7 +14,6 @@
 #import "HomeViewController.h"
 #import "UIImage+Image.h"
 #import "ZTTabBar.h"
-#import "MEViewController.h"
 @interface BasicMainTBC ()<ZTTabBarDelegate>
 =======
 #import "ZYTabBar.h"
@@ -101,7 +100,7 @@
     
     [self addChildViewControllerWithClassname:[UIViewController description]imagename:@"guanzhu" title:@"关注"];
     
-    [self addChildViewControllerWithClassname:[MEViewController description] imagename:@"me" title:@"我的"];
+    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"me" title:@"我的"];
     
     
     

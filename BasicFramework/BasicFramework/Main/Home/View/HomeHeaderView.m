@@ -21,7 +21,7 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     
-//    [self loadNetImageSystemPageControl];
+    [self loadNetImageSystemPageControl];
     
     
     
