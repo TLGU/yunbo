@@ -3,7 +3,7 @@
 #define  KEY_DEVICE_UUID @"KEY_DEVICE_UUID"
 
 #import <MyUUID/SPIMyUUID.h>
-
+#import "MD5Encryption.h"
 #import "NetWorkManager.h"
 #define kTimeoutInterval  15
 
@@ -134,94 +134,107 @@ static NetWorkManager *network = nil;
 
 -(void)requestDataForPOSTWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure
 {
-    AFHTTPSessionManager *manager = [self HTTPSessionManager];
-    
-    URL = [NSString stringWithFormat:@"%@%@",YGBaseURL,URL];
-    
-    [manager POST:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        /**
-         *  get Cookies
-         */
-//        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-//        if (![NSString isBlankString:[self getUserTokenIdInCookie:response.allHeaderFields[@"Set-Cookie"]]]) {
-//            
-//            if (!USER_TOKENID) {
-//                
-//                /**
-//                 *   登录先存储用于比对相应的headerfile
-//                 */
-//                [[AppSingle Shared]saveInMyLocalStoreForValue:[self getUserTokenIdInCookie:response.allHeaderFields[@"Set-Cookie"]] atKey:KEY_USER_TOKENID];
-//                
-//            }else
-//            {
-//                /**
-//                 *  登录后比对相应的headerfile
-//                 */
-////                if (![[self getUserTokenIdInCookie:response.allHeaderFields[@"Set-Cookie"]] isEqualToString:USER_TOKENID]) {
-////                    
-////                }
-//                [self alertShowWith:Controller];
-//            }
-//            NSLog(@"login  ---> %@",response.allHeaderFields);
-//            NSLog(@"login  ---> cookie %@",response.allHeaderFields[@"Set-Cookie"]);
-//            
-//        }
-        
-        
-        
-        
-        if (success) {
-            success(responseObject);
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        failure(error);
-        
-    }];
+     [self requestWithMethod:RequestMethodPost Url:URL parameters:parameters Controller:Controller success:success failure:failure];
     
 }
 -(void)requestDataForGETWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure
 {
     
+    [self requestWithMethod:RequestMethodGet Url:URL parameters:parameters Controller:Controller success:success failure:failure];
+}
+//不需要登录的接口
+-(BOOL)isNotLoginUrl:(NSString *)urlStr{
+    if ([urlStr isEqualToString:URL_For_RandCode]) {
+        return YES;
+    }
+    if ([urlStr isEqualToString:URL_For_Login]) {
+        return YES;
+    }
+    if ([urlStr isEqualToString:URL_For_Third_Login]) {
+        return YES;
+    }
+    if ([urlStr isEqualToString:URL_For_Register]) {
+        return YES;
+    }
+    if ([urlStr isEqualToString:URL_For_FindPwd]) {
+        return YES;
+    }
+    if ([urlStr isEqualToString:URL_For_UserRandCode]) {
+        return YES;
+    }
+    return NO;
+}
+
+-(void)requestWithMethod:(RequestMethod)method Url:(NSString*)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure
+{
     AFHTTPSessionManager *manager = [self HTTPSessionManager];
+   
+    if (![self isNotLoginUrl:URL]) {
+        parameters=  [self constructParams:parameters];
+    }
+   
     
     URL = [NSString stringWithFormat:@"%@%@",YGBaseURL,URL];
     
     
-    [manager GET:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        /**
-         *  get Cookies
-         */
-//        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-//        if (![NSString isBlankString:[self getUserTokenIdInCookie:response.allHeaderFields[@"Set-Cookie"]]]) {
-//            
-//            /**
-//             *  登录后比对相应的headerfile
-//             */
-////            if (![[self getUserTokenIdInCookie:response.allHeaderFields[@"Set-Cookie"]] isEqualToString:USER_TOKENID]) {
-////                
-////            }
-//            [self alertShowWith:Controller];
-//            NSLog(@"login  ---> %@",response.allHeaderFields);
-//            NSLog(@"login  ---> cookie %@",response.allHeaderFields[@"Set-Cookie"]);
-//        }
-        
-        
-        if (success) {
-            success(responseObject);
-            
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        failure(error);
-        
-    }];
+    if (method==RequestMethodGet)
+    {
+        [manager GET:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
+         {
+             NSInteger statusCode= [[responseObject objectForKey:@"statusCode"] integerValue];
+             NSString   * message= [responseObject objectForKey:@"message"];
+             if (statusCode!=NetworkResponseStatusSuccess) {
+                 [SVProgressHUD showErrorWithStatus:message?message:@"未知错误!"];
+                 if (failure) {
+                     NSError *err=[NSError errorWithDomain:message code:statusCode userInfo:nil];
+                     failure(err);
+                 }
+             }else{
+                 if (success) {
+                     success(responseObject);
+                 }
+             }
+             
+         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
+         {
+             [SVProgressHUD showErrorWithStatus:@"网络连接异常"];
+             NSError *err=[NSError errorWithDomain:@"网络连接异常" code:13527 userInfo:nil];
+             failure(err);
+             
+         }];
+    }
+    else
+    {
+        [manager POST:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
+         {
+             NSInteger statusCode= [[responseObject objectForKey:@"statusCode"] integerValue];
+             NSString   * message= [responseObject objectForKey:@"message"] ;
+             if (statusCode!=NetworkResponseStatusSuccess) {
+                 [SVProgressHUD showErrorWithStatus:message?message:@"未知错误!"];
+                 if (failure) {
+                     NSError *err=[NSError errorWithDomain:message code:statusCode userInfo:nil];
+                     failure(err);
+                 }
+             }else{
+                 if (success) {
+                     success(responseObject);
+                 }
+             }
+             
+         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
+         {
+             [SVProgressHUD showErrorWithStatus:@"网络连接异常"];
+             NSError *err=[NSError errorWithDomain:@"网络连接异常" code:13527 userInfo:nil];
+             failure(err);
+             
+         }];
+    }
+    
+    
     
 }
+
+
 - (AFHTTPSessionManager *)HTTPSessionManager{
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -229,13 +242,13 @@ static NetWorkManager *network = nil;
     /**
      *  先删除cookies
      */
-    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    
-    NSArray *cookies = [NSArray arrayWithArray:[cookieJar cookies]];
-    
-    for (NSHTTPCookie *cookie in cookies) {
-        [cookieJar deleteCookie:cookie];
-    }
+//    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+//    
+//    NSArray *cookies = [NSArray arrayWithArray:[cookieJar cookies]];
+//    
+//    for (NSHTTPCookie *cookie in cookies) {
+//        [cookieJar deleteCookie:cookie];
+//    }
     
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     
@@ -251,22 +264,16 @@ static NetWorkManager *network = nil;
     
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithArray:@[@"application/json", @"text/json", @"text/javascript",@"text/html", @"text/plain",@"application/atom+xml",@"application/xml",@"text/xml", @"image/*"]];
     
+   /*
     manager.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [manager.requestSerializer setValue:[USER_ID stringValue] forHTTPHeaderField:@"uid"];
     [manager.requestSerializer setValue:[self getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
     [manager.requestSerializer setValue:kVersion forHTTPHeaderField:@"version"];
-//    if (USER_TOKENID) {
-//        
-//        [manager.requestSerializer setValue:USER_TOKENID forHTTPHeaderField:@"Cookie"];
-//    }
-//    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
-//    [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:temp_array[0] password:temp_array[1]];
-    
-    //    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     manager.operationQueue.maxConcurrentOperationCount = 2;
-    
+     
+    */
     
     
     return manager;
@@ -334,11 +341,8 @@ static UIViewController *tempVC = nil;
  */
 -(NSString *)getUserTokenIdInCookie:(NSString *)theCookie
 {
-    //例如 ：JSESSIONID=25F6DBC6AB286542F37D58B8EDBB84BD; Path=/pad, cookie_user=fsdf#~#sdfs.com; Expires=Tue, 26-Nov-2013 06:31:33 GMT, cookie_pwd=123465; Expires=Tue, 26-Nov-2013 06:31:33 GMT
     NSString *basic_str = @"";
-//    
-//    NSMutableArray *cookisArray=[NSMutableArray arrayWithCapacity:20];
-//    NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
+
     
     NSArray *theArray = [theCookie componentsSeparatedByString:@"; "];
     
@@ -351,48 +355,7 @@ static UIViewController *tempVC = nil;
         }
     }
     
-    
-//    for (int i =0 ; i<[theArray count]; i++) {
-//        NSString *val=theArray[i];
-//        if ([val rangeOfString:@"="].length>0)
-//        {
-//            NSArray *subArray = [val componentsSeparatedByString:@"="];
-//            for (int i =0 ; i<[subArray count]; i++) {
-//                NSString *subVal=subArray[i];
-//                if ([subVal rangeOfString:@","].length>0)
-//                {
-//                    NSArray *subArray2 = [subVal componentsSeparatedByString:@","];
-//                    for (int i =0 ; i<[subArray2 count]; i++) {
-//                        NSString *subVal2=subArray2[i];
-//                        [cookisArray addObject:subVal2];
-//                    }
-//                }
-//                else
-//                {
-//                    [cookisArray addObject:subVal];
-//                }
-//            }
-//        }
-//        else
-//        {
-//            [cookisArray addObject:val];
-//        }
-//    }
-//    for (int idx=0; idx<cookisArray.count; idx+=2) {
-//        NSString *key=cookisArray[idx];
-//        NSString *value;
-//        if ([key isEqualToString:@"JSESSIONID"])
-//        {
-//            value=[NSString stringWithFormat:@"%@,%@",cookisArray[idx+1],cookisArray[idx+2]];
-//            idx+=1;
-//        }
-//        else
-//        {
-//            value=cookisArray[idx+1];
-//        }
-//        NSLog(@"cookie value:%@=%@",key,value);
-//        [cookieProperties setObject:value forKey:key];
-//    }
+   
     
     
     return basic_str;
@@ -401,5 +364,74 @@ static UIViewController *tempVC = nil;
 {
     [APPSINGLE DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
     [APPSINGLE DeleteValueInMyLocalStoreForKey:kReachability];
+}
+
+//构建传递参数
+
+-(NSDictionary *)constructParams:(NSMutableDictionary*)sender
+{
+     NSString *name= [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
+    if (!name||!name.length) {
+        return sender;
+    }
+    
+    
+    NSMutableDictionary *dict=[NSMutableDictionary dictionary];
+    NSString *usernme= [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
+    if (!usernme) {
+        usernme=@"";
+        
+    }
+    dict[@"name"]=usernme;
+    dict[@"randCode"]=[self ret32bitString];
+    dict[@"encrpt"]=@"enAes";
+    dict[@"isEncryption"]=@"false";
+    dict[@"mode"]=@"2";
+    
+    NSString *paramters=  [self dictionaryToJson:sender];
+    dict[@"data"]=paramters;
+    
+    NSString *key= [[NSUserDefaults standardUserDefaults] objectForKey:user_key_key];
+    
+    NSString *text= [key stringByAppendingString:dict[@"randCode"]];
+   
+    
+    
+    
+    
+    if (!name||!name.length) {
+        name=@"";
+    }
+    
+    NSString *tempKey=[MD5Encryption  md5by32:text];
+    NSString *mac=  [[tempKey stringByAppendingString:name] stringByAppendingString:paramters];
+    dict[@"mac"]=[MD5Encryption  md5by32:mac];
+    
+    
+    
+    return dict;
+    
+}
+-(NSString *)ret32bitString
+
+{
+    
+    char data[32];
+    
+    for (int x=0;x<32;data[x++] = (char)('A' + (arc4random_uniform(26))));
+    
+    return [[NSString alloc] initWithBytes:data length:32 encoding:NSUTF8StringEncoding];
+    
+}
+- (NSString*)dictionaryToJson:(NSDictionary *)dic
+
+{
+    
+    NSError *parseError = nil;
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
 }
 @end

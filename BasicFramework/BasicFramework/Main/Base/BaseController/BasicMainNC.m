@@ -29,11 +29,44 @@
     [[UINavigationBar appearance] setTitleTextAttributes:dic];
     [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
     [[UIBarButtonItem appearance]setTitleTextAttributes:dic forState:UIControlStateNormal];
-        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
-    UIImage *backItemImage = [[UIImage imageNamed:@"back"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 0, 0) resizingMode:UIImageResizingModeStretch];
-    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setBackButtonBackgroundImage:backItemImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
     
+//        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
+//    UIImage *backItemImage = [[UIImage imageNamed:@"back"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 0, 0) resizingMode:UIImageResizingModeStretch];
+//    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setBackButtonBackgroundImage:backItemImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    
+}
+
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (self.childViewControllers.count>=1)
+    {
+        UIButton *backbutton=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+        
+        [backbutton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        
+        [backbutton setContentEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
+        
+        [backbutton addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *leftItem=[[UIBarButtonItem alloc] initWithCustomView:backbutton];
+        
+        [viewController.navigationItem setLeftBarButtonItem:leftItem];
+        
+//        [viewController setHidesBottomBarWhenPushed:YES];
+//        viewController.tabBarController.tabBar.hidden=YES;
+    }else{
+//       viewController.tabBarController.tabBar.hidden=NO;
+    }
+    
+    [super pushViewController:viewController animated:animated];
+    
+    
+}
+-(void)backAction:(id)sender
+{
+    [self popViewControllerAnimated:YES];
 }
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
@@ -79,7 +112,7 @@
         // [self setNeedsStatusBarAppearanceUpdate];
         
         //设置状态栏颜色
-        [self setStatusBarBackgroundColor:kRGB(101, 169, 252)];
+        [self setStatusBarBackgroundColor:base_control_color];
     }
     
     - (void)viewWillDisappear:(BOOL)animated{

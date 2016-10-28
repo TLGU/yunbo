@@ -1,6 +1,24 @@
 //
 //
+typedef NS_ENUM(NSInteger, NetworkResponseStatus) {
+    NetworkResponseStatusSuccess = 200,//操作成功
+    NetworkResponseStatusFailure = 300,//操作失败
+    NetworkResponseStatusWaiting = 502,//等待处理
+    NetworkResponseStatusDoing = 500,//处理中
+    NetworkResponseStatusWaitingResult=501,//等待结果
+    NetworkResponseStatusOrderNotExist=404,//订单不存在
+    NetworkResponseStatusWatingPay=201,//等待付款
+    NetworkResponseStatusWatingSendGoods=202,//等待发货
+    NetworkResponseStatusRefunded=204,//已退款
+    NetworkResponseStatusTransactionClosed=205//交易关闭
+};
 
+
+typedef NS_ENUM(NSUInteger, RequestMethod) {
+    RequestMethodPost=1,
+    RequestMethodGet
+    
+};
 
 /**
  *  获取Window
@@ -93,10 +111,24 @@ return self;\
 \
 }
 
+/**
+ *  友盟三方登录支付宏
+ */
+//友盟appkey
+#define UMENG_APPKEY  @"5798417367e58e15a6003b9a"
+//QQ AppId
+#define QQ_APPID  @"1105572618"
+//QQ appKey
+#define QQ_APPKEY @"P7YMniAmHEmtflPV"
+//微信 AppId
+#define WEIXIN_APPID @"wxe1a6b92abbb2ccc6"
+//微信 appKey
+#define WEIXIN_APPKEY @"edbea80d435d3f79fddacb1ba948225a"
 
+//#define WEIXIN_APPID @"wxb4ba3c02aa476ea1"
+////微信 appKey
+//#define WEIXIN_APPKEY @"edbea80d435d3f79fddacb1ba948225a"
 
+#define user_name_key @"user_name_key"
 
-
-
-
-
+#define user_key_key @"user_key_key"

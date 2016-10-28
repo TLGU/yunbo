@@ -45,7 +45,8 @@ static const CGFloat kYSLScrollMenuViewHeight = 40;
     return self;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
 

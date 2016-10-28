@@ -10,7 +10,19 @@
 #import "RootViewController.h"
 #import "BasicMainWebNC.h"
 #import "BasicMainNC.h"
-@interface BasicMainTBC ()
+<<<<<<< HEAD
+#import "HomeViewController.h"
+#import "UIImage+Image.h"
+#import "ZTTabBar.h"
+#import "MEViewController.h"
+@interface BasicMainTBC ()<ZTTabBarDelegate>
+=======
+#import "ZYTabBar.h"
+
+#import "TestViewController.h"
+
+@interface BasicMainTBC ()<ZYTabBarDelegate>
+>>>>>>> origin/branch-1
 
 @end
 
@@ -25,6 +37,7 @@
     
     // 拿到整个导航控制器的外观
     UITabBarItem * item = [UITabBarItem appearance];
+    
     item.titlePositionAdjustment = UIOffsetMake(0, 1.5);
     
     // 普通状态
@@ -38,22 +51,79 @@
     selectAtts[NSFontAttributeName] = [UIFont systemFontOfSize:13];
     selectAtts[NSForegroundColorAttributeName] = [UIColor colorWithRed:0.42f green:0.33f blue:0.27f alpha:1.00f];
     [item setTitleTextAttributes:selectAtts forState:UIControlStateSelected];
-}
     
+    
+}
+
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    [self addChildViewControllerWithClassname:[RootViewController description] imagename:@"1--VR专区_03hui" title:@"推荐"];
-    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"11_03" title:@"搜索"];
-    [self addChildViewControllerWithClassname:[UIViewController description]imagename:@"22_03" title:@"赚钱"];
-    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"5_03" title:@"我的"];
+    
+    
+    
+  
+    
+    
+//    self.tabBar.translucent = NO;
+//    self.tabBar.backgroundImage = [UIImage imageNamed:@"bar"];
+//    self.tabBar.tintColor = [UIColor blackColor];
+    
+    
+    [self setChildVC];
+    
+    [self setUpTabbar];
+    
+}
+- (void)setUpTabbar {
+    
+    ZTTabBar *tabBar = [[ZTTabBar alloc] init];
+    
+    tabBar.delegate = self;
+    // KVC：如果要修系统的某些属性，但被设为readOnly，就是用KVC，即setValue：forKey：。
+    
+    [self setValue:tabBar forKey:@"tabBar"];
+    
+}
+
+
+
+
+
+
+
+
+- (void)setChildVC {
+    
+    
+    [self addChildViewControllerWithClassname:[HomeViewController description] imagename:@"home" title:@"首页"];
+    
+    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"search" title:@"搜索"];
+    
+    [self addChildViewControllerWithClassname:[UIViewController description]imagename:@"guanzhu" title:@"关注"];
+    
+    [self addChildViewControllerWithClassname:[MEViewController description] imagename:@"me" title:@"我的"];
+    
     
     
 }
-    
+<<<<<<< HEAD
     // 添加子控制器
 - (void)addChildViewControllerWithClassname:(NSString *)classname
                                   imagename:(NSString *)imagename
                                       title:(NSString *)title {
+=======
+#pragma mark--ZYTabBarDelegate
+- (void)pathButton:(ZYPathButton *)ZYPathButton clickItemButtonAtIndex:(NSUInteger)itemButtonIndex
+{
+    NSLog(@" 点中了第%ld个按钮" , itemButtonIndex);
+    if (itemButtonIndex==0)
+    {
+        TestViewController *vc=[TestViewController new];
+        UINavigationController *nav=  (UINavigationController *)self.selectedViewController;
+        [nav pushViewController:vc animated:YES];
+    }
+    
+>>>>>>> origin/branch-1
     
     UIViewController *vc = [[NSClassFromString(classname) alloc] init];
     BasicMainNC *nav = [[BasicMainNC alloc] initWithRootViewController:vc];
@@ -62,6 +132,24 @@
     nav.tabBarItem.selectedImage = [[UIImage imageNamed:[imagename stringByAppendingString:@"_press"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [self addChildViewController:nav];
     
+}
+
+
+-(UIImage *)getBackImg
+{
+    return  [UIImage createImageWithColor:[UIColor blackColor]];
+}
+#pragma ZTTabBarDelegate
+/**
+ *  加号按钮点击
+ */
+- (void)tabBarDidClickPlusButton:(ZTTabBar *)tabBar
+{
+//    UIViewController *vc = [[UIViewController alloc] init];
+//    [self presentViewController:vc animated:YES completion:nil];
+}
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BasicFramework/Main/AppDelegate/ViewController.m"
+            timestampString = "498024680.90172"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BasicFramework/Expand/Network/NetWorkManager.m"
+            timestampString = "498043044.100094"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "-requestDataForPOSTWithURL:parameters:Controller:success:failure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NetWorkManager requestDataForPOSTWithURL:parameters:Controller:success:failure:]"
+                  moduleName = "BasicFramework"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhouhang/Desktop/YunBogit/yunbo/BasicFramework/BasicFramework/Expand/Network/NetWorkManager.m"
+                  timestampString = "498142123.322441"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__82-[NetWorkManager requestDataForPOSTWithURL:parameters:Controller:success:failure:]_block_invoke"
+                  moduleName = "BasicFramework"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhouhang/Desktop/YunBogit/yunbo/BasicFramework/BasicFramework/Expand/Network/NetWorkManager.m"
+                  timestampString = "498142123.324759"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

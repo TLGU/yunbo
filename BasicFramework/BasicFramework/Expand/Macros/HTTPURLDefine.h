@@ -16,7 +16,8 @@
  *  @param 开发环境
  *
  */
-#define YGBaseURL @"http://"
+//#define YGBaseURL @"http://121.40.177.251:3330/duohaowan/"//外网
+#define YGBaseURL @"http://192.168.1.108:8080/duohaowan/"//内网
 
 #elif ENVIRONMENT ==1
 
@@ -26,7 +27,7 @@
  *  @param 测试环境
  *
  */
-#define YGBaseURL @"http://"
+#define YGBaseURL @"http://192.168.1.108:8080/duohaowan/"
 
 #elif ENVIRONMENT ==2
 
@@ -36,7 +37,7 @@
  *  @param 正式环境
  *
  */
-#define YGBaseURL @"http://"
+#define YGBaseURL @"http://121.40.177.251:3330/duohaowan/"
 
 
 #endif /* HTTPURLDefine_h */
@@ -50,6 +51,19 @@
 
 
 
+
+//获取用户验证码
+#define URL_For_UserRandCode @"rand/getUserPhoneRand.do"
+//验证码
+#define URL_For_RandCode @"rand/getPhoneRand.do"
+//登录
+#define URL_For_Login @"front/login_simple.do"
+//三方登录
+#define URL_For_Third_Login @"front/register_third_user.do"
+//注册
+#define URL_For_Register @"front/register.do"
+//找回密码
+#define URL_For_FindPwd  @"front/resetPassword.do"
 
 
 

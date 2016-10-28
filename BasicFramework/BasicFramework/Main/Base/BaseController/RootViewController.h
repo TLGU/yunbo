@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RootViewController : UIViewController
-
+@property(strong,nonatomic)UICollectionView *collectionViewDown;
+@property (nonatomic, strong) NSIndexPath *currentIndexPath;
 @end

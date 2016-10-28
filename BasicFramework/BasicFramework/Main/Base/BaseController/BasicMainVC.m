@@ -23,8 +23,8 @@
         
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     }
-    self.view.backgroundColor=kWhiteColor;
-    
+//    self.view.backgroundColor=kWhiteColor;
+    self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
 }
 
 #pragma mark - removeKeyboardNotification

@@ -13,11 +13,18 @@
 /**
  *  默认页面背景色
  */
+
+#define DMRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
 #define kBackGroundColor UIColorFromRGBValue(0Xf5f7fa)
 /**
  *  默认白色
  */
 #define kWhiteColor UIColorFromRGBValue(0Xffffff)
+
+//随即色
+#define DMRandColor DMRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
 
 #define kCommonBgColor [UIColor colorWithRed:0.86f green:0.85f blue:0.80f alpha:1.00f]
 //橘色
@@ -31,6 +38,15 @@
  *  主题颜色
  */
 #define kThemeColor UIColorFromRGBValue(0X0096f4)
+
+/**
+ 控件基调色
+ */
+
+
+#define base_control_color kRGB(24, 24, 24)
+
+
 /**
  *  主题辅助颜色（状态，提示等...）
  */
