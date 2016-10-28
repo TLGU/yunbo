@@ -1102,8 +1102,13 @@
 			isa = PBXGroup;
 			children = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 				0F48BA441DC3325F0043DEAB /* 作品列表 */,
 				0FAABAB61DC2423B008A0AF4 /* 作品详情 */,
+=======
+				364DA5AB1D6584F400F6F424 /* RootViewController.h */,
+				364DA5AC1D6584F400F6F424 /* RootViewController.m */,
+>>>>>>> origin/branch-1
 =======
 				364DA5AB1D6584F400F6F424 /* RootViewController.h */,
 				364DA5AC1D6584F400F6F424 /* RootViewController.m */,
@@ -1146,6 +1151,7 @@
 				0FAABAB21DC241DF008A0AF4 /* 作品详情页面 */,
 				36111AA71D6EE58C00A03BF4 /* Placeholder */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				0FFC8FD21DC1E185003DA47A /* HomeHeaderView.h */,
 				0FFC8FD31DC1E185003DA47A /* HomeHeaderView.m */,
 				0FFC8FD51DC1E195003DA47A /* HomeHeaderView.xib */,
@@ -1159,12 +1165,17 @@
 				0FFC90001DC204C0003DA47A /* ZuoPinTableViewCell.m */,
 				0FFC90011DC204C0003DA47A /* ZuoPinTableViewCell.xib */,
 =======
+=======
+>>>>>>> origin/branch-1
 				C86E12921DB084BF0054ABCE /* RootCollectionViewCell.h */,
 				C86E12931DB084BF0054ABCE /* RootCollectionViewCell.m */,
 				C86E12941DB084BF0054ABCE /* RootCollectionViewCell.xib */,
 				C876DA511DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.h */,
 				C876DA521DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.m */,
 				C876DA531DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.xib */,
+<<<<<<< HEAD
+>>>>>>> origin/branch-1
+=======
 >>>>>>> origin/branch-1
 			);
 			path = View;
@@ -1564,10 +1575,15 @@
 			isa = PBXGroup;
 			children = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 				0F48BA551DC349710043DEAB /* SGTopTitleView */,
 				0F48BA4A1DC33D700043DEAB /* XRWaterfallLayout */,
 				0FFC8FD71DC1E506003DA47A /* LBBannerKit */,
 				0F06619D1DB753C200634656 /* 图片编辑 */,
+=======
+				C8A7C1AA1DB45F7E00363E02 /* 图像处理 */,
+				C876DA561DB0F3F600DCD816 /* 瀑布流 */,
+>>>>>>> origin/branch-1
 =======
 				C8A7C1AA1DB45F7E00363E02 /* 图像处理 */,
 				C876DA561DB0F3F600DCD816 /* 瀑布流 */,
@@ -2008,7 +2024,10 @@
 			sourceTree = "<group>";
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/branch-1
 		C8A7C1AA1DB45F7E00363E02 /* 图像处理 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2377,7 +2396,11 @@
 				0FFC8FD41DC1E185003DA47A /* HomeHeaderView.m in Sources */,
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				0FAABAB01DC24093008A0AF4 /* ProductionDetailVC.m in Sources */,
+=======
+				C876DA5F1DB0FB2C00DCD816 /* CustomTransition.m in Sources */,
+>>>>>>> origin/branch-1
 =======
 				C876DA5F1DB0FB2C00DCD816 /* CustomTransition.m in Sources */,
 >>>>>>> origin/branch-1

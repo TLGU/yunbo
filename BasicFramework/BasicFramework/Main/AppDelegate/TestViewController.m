@@ -34,8 +34,11 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/branch-1
 - (IBAction)ImageAdjustAction:(id)sender {
     
     [self pushedNewBtn];
@@ -85,6 +88,9 @@
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"请选择" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"照相", @"相册选取", nil];
     [sheet showInView:self.view.window];
 }
+<<<<<<< HEAD
+>>>>>>> origin/branch-1
+=======
 >>>>>>> origin/branch-1
 - (IBAction)loginTest:(id)sender {
      [[NSNotificationCenter defaultCenter] postNotificationName:LoginStatus_Changed object:nil];
